@@ -6,6 +6,11 @@ import {
 import ErrorStore, { ERROR_DEFAULT_VALUE } from '../error/ErrorStore';
 import LoadingStore from '../loading/LoadingStore';
 
+export interface CategoryKeywordsDto {
+  category: string;
+  keywords: string[];
+}
+
 class KeywordStore {
   keywords: string[];
 
@@ -76,7 +81,7 @@ class KeywordStore {
       `/categories/${category}/keywords`,
     )
       .then(res =>
-        res?.data?.map((e: string) => {
+        res?.data?.keywords?.map((e: string) => {
           runInAction(() => {
             this.keywords.push(e);
           });
