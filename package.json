@@ -31,6 +31,7 @@
     "dotenv": "^16.0.3",
     "js-file-download": "^0.4.12",
     "lefthook": "^1.1.1",
+    "local": "^0.3.3",
     "mobx": "^6.6.1",
     "mobx-react-lite": "^3.4.0",
     "prettier": "^2.7.1",

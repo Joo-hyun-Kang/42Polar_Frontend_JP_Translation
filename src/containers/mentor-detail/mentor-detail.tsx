@@ -30,6 +30,7 @@ import MyTableComponents from '../../components/mentor-detail/my-table';
 import NotFound from '../not-found/not-found';
 import UserJoinStore from '../../states/user-join/UserJoinStore';
 import { NowDateKr } from '../../states/date-kr';
+import defaultProfile from '../../assets/image/defaultProfileImage.png';
 
 function MentorDetail() {
   const [mentorIntroduction, setMentorIntroduction] = useState<string>('');
@@ -305,7 +306,11 @@ function MentorDetail() {
         <>
           <MentorHeader>
             <MentorInfo>
-              <MentorImage src={mentor?.profileImage} />
+              <MentorImage
+                src={
+                  mentor?.profileImage ? mentor?.profileImage : defaultProfile
+                }
+              />
               <MentorInfoContent>
                 <MentorName>
                   <div className="mentor-name">{mentor?.name} 멘토</div>
@@ -1000,6 +1005,8 @@ const MentorImage = styled.img`
   width: 18rem;
   height: 18rem;
   border-radius: 50%;
+  margin-right: 2rem;
+
   @media screen and (max-width: 700px) {
     width: 13rem;
     height: 13rem;
