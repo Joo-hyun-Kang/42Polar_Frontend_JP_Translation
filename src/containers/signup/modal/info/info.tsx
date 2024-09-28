@@ -103,7 +103,7 @@ export function Info(props: InfoProps) {
       ] = `bearer ${AuthStore.getAccessToken()}`;
 
       const response = await axios.post(
-        `${process.env.REACT_APP_BASE_BACKEND_URL}/email-verifications`,
+        `${process.env.REACT_APP_BASE_BACKEND_URL}/mentors/email`,
         {
           email: email,
         },
@@ -156,7 +156,7 @@ export function Info(props: InfoProps) {
       ] = `bearer ${AuthStore.getAccessToken()}`;
 
       const response = await axios.post(
-        `${process.env.REACT_APP_BASE_BACKEND_URL}/email-verifications/${code}`,
+        `${process.env.REACT_APP_BASE_BACKEND_URL}/mentors/email/verifications/${code}`,
         {
           code: code,
         },

@@ -53,7 +53,7 @@ class MentorStore {
     LoadingStore.on();
     await axiosWithData(
       AXIOS_METHOD_WITH_DATA.POST,
-      `/email-verifications/${code}`,
+      `/mentors/email/verifications/${code}`,
       {},
       {
         headers: {
@@ -75,7 +75,7 @@ class MentorStore {
     LoadingStore.on();
     await axiosWithData(
       AXIOS_METHOD_WITH_DATA.POST,
-      `/email-verifications`,
+      `/mentors/email`,
       { email: email },
       {
         headers: {
