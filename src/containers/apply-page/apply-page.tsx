@@ -540,7 +540,7 @@ const ApplyPage = () => {
     try {
       LoadingStore.on();
       await axiosInstance
-        .post(`cadets/mentorings/apply/${mentorId}`, postData, {
+        .post(`mentoring-logs/apply/${mentorId}`, postData, {
           headers: {
             Authorization: `bearer ${token}`,
           },
