@@ -7,7 +7,7 @@ import defaultTheme from '../../styles/theme';
 import { REPORT_STATE } from './report-form';
 
 const PageTitle = styled.div`
-  ${defaultTheme.font.sebangGothic};
+  ${defaultTheme.font.inter};
   ${defaultTheme.fontSize.sizeMedium};
   border-top: 2px solid black;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);

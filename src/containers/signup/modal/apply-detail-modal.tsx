@@ -32,7 +32,7 @@ const Box = styled.div`
 `;
 
 const PageTitle = styled.div`
-  ${defaultTheme.font.sebangGothic};
+  ${defaultTheme.font.inter};
   ${defaultTheme.fontSize.sizeMedium};
   display: flex;
   justify-content: center;

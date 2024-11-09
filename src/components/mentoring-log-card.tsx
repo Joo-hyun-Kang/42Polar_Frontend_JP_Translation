@@ -17,14 +17,14 @@ const Container = styled.div`
 `;
 
 const MentorName = styled.div`
-  ${defaultTheme.font.sebangGothic};
+  ${defaultTheme.font.inter};
   ${defaultTheme.fontFrame.titleMedium};
   ${defaultTheme.fontSize.sizeExtraSmall};
   margin-bottom: 5px;
 `;
 
 const RequestTime = styled.div`
-  ${defaultTheme.font.sebangGothic};
+  ${defaultTheme.font.inter};
   ${defaultTheme.fontFrame.titleLarge};
   ${defaultTheme.fontSize.sizeSmall};
   opacity: 0.5;
@@ -32,7 +32,7 @@ const RequestTime = styled.div`
 `;
 
 const MeetingAt = styled.div`
-  ${defaultTheme.font.sebangGothic};
+  ${defaultTheme.font.inter};
   ${defaultTheme.fontFrame.titleLarge};
   ${defaultTheme.fontSize.sizeSmall};
   color: ${defaultTheme.fontColor.blueColor};

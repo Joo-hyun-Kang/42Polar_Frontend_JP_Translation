@@ -36,7 +36,7 @@ const CanvasModalTitle = styled.div`
   justify-content: left;
   align-items: center;
   text-align: center;
-  ${defaultTheme.font.sebangGothic};
+  ${defaultTheme.font.inter};
   ${defaultTheme.fontSize.sizeExtraSmall};
 `;
 

@@ -45,7 +45,7 @@ const ProfileRight = styled.div`
 `;
 
 const ProfileName = styled.div`
-  ${defaultTheme.font.sebangGothic};
+  ${defaultTheme.font.inter};
   ${defaultTheme.fontSize.sizeExtraSmall};
   margin-bottom: 5px;
   font-weight: bold;
@@ -80,7 +80,7 @@ const ButtonWrapper = styled(Link)`
 const Button = styled.button`
   display: flex;
   ${defaultTheme.fontSize.sizeSmall};
-  ${defaultTheme.font.sebangGothic};
+  ${defaultTheme.font.inter};
   border-radius: 5px;
   border: none;
   text-align: center;

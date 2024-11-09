@@ -12,7 +12,7 @@ const ReportRowContentTitie = styled.div`
   margin: 20px 0px 0px 15px;
   justify-content: left;
   ${defaultTheme.fontSize.sizeMedium};
-  ${defaultTheme.font.sebangGothic};
+  ${defaultTheme.font.inter};
 `;
 
 const ReportSummaryTitle = styled.div`

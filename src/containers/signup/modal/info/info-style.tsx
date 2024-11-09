@@ -14,7 +14,7 @@ export const Container = styled.div`
 export const NameTitle = styled.h2`
   font-weight: 400;
   font-size: 1.8rem;
-  ${defaultTheme.font.sebangGothic};
+  ${defaultTheme.font.inter};
   padding-left: 20px;
   padding-bottom: 5px;
 `;
@@ -31,7 +31,7 @@ export const InfoInput = styled.input`
   border-right: 0px;
   border-top: 0px;
   font-size: 19;
-  ${theme.font.sebangGothic};
+  ${theme.font.inter};
   ${theme.fontWeight.weightSmall};
   //${theme.fontSize.sizeExtraSmall};
 `;

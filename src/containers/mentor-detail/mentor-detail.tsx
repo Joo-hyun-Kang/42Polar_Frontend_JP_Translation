@@ -1034,7 +1034,7 @@ const MentorName = styled.div`
   flex-wrap: wrap;
   .mentor-name {
     ${theme.fontFrame.titleLarge};
-    ${theme.font.sebangGothic};
+    ${theme.font.inter};
     font-weight: 900;
     @media screen and (max-width: 700px) {
       margin-top: 1rem;

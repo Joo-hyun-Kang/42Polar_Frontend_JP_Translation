@@ -117,7 +117,7 @@ export const MentorText = (
 );
 
 const MoTextStyle = styled.div`
-  ${theme.font.sebangGothic};
+  ${theme.font.inter};
   font-size: 1.3rem;
   line-height: 3.5rem;
   position: absolute;
@@ -198,7 +198,7 @@ export const NoticeText = (
 );
 
 const MoNoticeTextStyle = styled.div`
-  ${theme.font.sebangGothic};
+  ${theme.font.inter};
   font-size: 1.4rem;
   line-height: 1rem;
   position: absolute;

@@ -14,7 +14,7 @@ export const MainContainer = styled.div`
   background-color: ${theme.colors.polarBackground};
   left: 0;
   ${theme.fontSize.sizeMedium};
-  ${theme.font.sebangGothic};
+  ${theme.font.inter};
   height: calc(100vh - 205px);
   width: 100%;
   display: grid;
@@ -38,7 +38,7 @@ export const MainContainer2 = styled.div`
   background-color: ${theme.colors.polarBackground};
   left: 0;
   ${theme.fontSize.sizeSmall};
-  ${theme.font.sebangGothic};
+  ${theme.font.inter};
   height: calc(100% - 220px);
   width: 100%;
   display: grid;
@@ -155,7 +155,7 @@ export const TextUnder = styled.span`
   border-bottom: 1px solid ${theme.colors.polarSimpleMain};
   text-underline-offset: 1rem;
   ${theme.fontSize.sizeLarge};
-  ${theme.font.sebangGothic};
+  ${theme.font.inter};
   ${theme.fontWeight.weightLarge};
 `;
 
@@ -240,7 +240,7 @@ export const KeywordStyle = styled.div<{ colStart: number; rowStart: number }>`
   align-items: center;
   grid-column-start: colStart;
   grid-row-start: rowStart;
-  ${theme.font.sebangGothic};
+  ${theme.font.inter};
   color: ${theme.fontColor.titleColor};
   font-size: 2.3rem;
 `;
@@ -252,7 +252,7 @@ export const KeywordStyle2 = styled.div<{ colStart: number; rowStart: number }>`
   align-items: center;
   grid-column-start: colStart;
   grid-row-start: rowStart;
-  ${theme.font.sebangGothic};
+  ${theme.font.inter};
   color: ${theme.fontColor.titleColor};
   font-size: 1.8rem;
 `;
@@ -271,7 +271,7 @@ export const IconButton = styled.button`
 `;
 
 export const TextStyle = styled.div`
-  ${theme.font.sebangGothic};
+  ${theme.font.inter};
   font-size: 1.8rem;
   line-height: 4.5rem;
   position: absolute;
@@ -282,7 +282,7 @@ export const TextStyle = styled.div`
 `;
 
 export const NoticeTextStyle = styled.div`
-  ${theme.font.sebangGothic};
+  ${theme.font.inter};
   font-size: 2rem;
   line-height: 2.7rem;
   position: absolute;

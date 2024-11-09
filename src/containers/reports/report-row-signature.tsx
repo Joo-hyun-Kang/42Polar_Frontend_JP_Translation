@@ -18,7 +18,7 @@ const Left = styled.div`
   align-items: center;
   flex-direction: column;
   ${defaultTheme.fontSize.sizeSmall};
-  ${defaultTheme.font.sebangGothic};
+  ${defaultTheme.font.inter};
 `;
 
 const ReportSummaryTitle = styled.div`
@@ -151,7 +151,7 @@ const RightTitle = styled.div`
   margin: 20px 0px 0px 15px;
   justify-content: left;
   ${defaultTheme.fontSize.sizeMedium};
-  ${defaultTheme.font.sebangGothic};
+  ${defaultTheme.font.inter};
 `;
 
 const SignatureTitleContainer = styled.div`
@@ -167,7 +167,7 @@ const SignatureTitle = styled.div`
   justify-content: left;
   align-items: center;
   ${defaultTheme.fontSize.sizeMedium};
-  ${defaultTheme.font.sebangGothic};
+  ${defaultTheme.font.inter};
 `;
 
 export const ReportRowSignature = observer(() => {

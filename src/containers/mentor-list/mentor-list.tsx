@@ -22,7 +22,7 @@ const NoneDrag = styled.div`
 
 const Title = styled.div`
   ${defaultTheme.fontSize.sizeExtraMedium};
-  ${defaultTheme.font.sebangGothic};
+  ${defaultTheme.font.inter};
   display: flex;
   justify-content: center;
   padding: 20px 0px;
@@ -52,7 +52,7 @@ const SearchContainer = styled.div`
 `;
 
 const Text = styled.div`
-  ${defaultTheme.font.sebangGothic};
+  ${defaultTheme.font.inter};
   ${defaultTheme.fontSize.sizeExtraSmall};
   font-weight: bold;
   @media screen and (max-width: 500px) {

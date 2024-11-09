@@ -7,7 +7,7 @@ const FooterStyle = styled.footer`
   width: 100%;
   height: 12rem;
   font-size: 1.3rem;
-  ${theme.font.sebangGothic};
+  ${theme.font.inter};
   color: ${theme.colors.backgoundWhite};
 `;
 const FooterBody = styled.footer`
@@ -90,9 +90,7 @@ const Footer = () => {
           주소 서울시 강남구 개포로 416 이노베이션 아카데미
         </FooterBody>
         <FooterBody>copyright 2022 polar All rights reserved.</FooterBody>
-        <FooterLastBody>
-          폴라팀에게 문의하기 : 42polar@gmail.com
-        </FooterLastBody>
+        <FooterLastBody>폴라팀에게 문의하기 : 42polar@gmail.com</FooterLastBody>
       </div>
     </FooterStyle>
   );

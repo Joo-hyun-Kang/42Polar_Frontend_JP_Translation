@@ -29,7 +29,7 @@ const Container = styled.div`
 
 const Resume = styled.div`
   display: flex;
-  ${defaultTheme.font.sebangGothic};
+  ${defaultTheme.font.inter};
   ${defaultTheme.fontSize.sizeSmall};
   margin-top: 15px;
   align-items: center;
@@ -59,7 +59,7 @@ const DoubleButton = styled.div`
 `;
 
 const MentorName = styled.div`
-  ${defaultTheme.font.sebangGothic};
+  ${defaultTheme.font.inter};
   ${defaultTheme.fontSize.sizeExtraMedium};
   margin-bottom: 5px;
 `;

@@ -54,6 +54,7 @@ const defaultTheme: DefaultTheme = {
   },
 
   font: {
+    inter: 'font-family: "inter"',
     sebangGothic: 'font-family: "SEBANG Gothic"',
     nanumGothic: 'font-family: "NanumGothic"',
   },

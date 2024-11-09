@@ -38,7 +38,7 @@ const Top = styled.div`
 `;
 
 const InfoTitle = styled.div`
-  ${defaultTheme.font.sebangGothic};
+  ${defaultTheme.font.inter};
   ${defaultTheme.fontSize.sizeMedium};
   font-weight: bold;
   margin-bottom: 10px;
@@ -78,7 +78,7 @@ const muiTheme = createTheme({
     },
   },
   typography: {
-    fontFamily: theme.font.sebangGothic,
+    fontFamily: theme.font.inter,
     fontSize: 20,
     fontWeightLight: 700,
   },

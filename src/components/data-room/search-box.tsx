@@ -80,7 +80,7 @@ const muiTheme = createTheme({
     },
   },
   typography: {
-    fontFamily: theme.font.sebangGothic,
+    fontFamily: theme.font.inter,
     fontSize: 20,
     fontWeightLight: 700,
   },

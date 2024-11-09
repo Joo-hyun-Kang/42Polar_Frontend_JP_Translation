@@ -80,7 +80,7 @@ export const ModalTitle = styled.div`
   justify-content: left;
   align-items: center;
   text-align: center;
-  ${defaultTheme.font.sebangGothic};
+  ${defaultTheme.font.inter};
   ${defaultTheme.fontSize.sizeExtraSmall};
 `;
 
@@ -124,7 +124,7 @@ export const ModalButton = styled.div`
     opacity: 0.8;
   }
   cursor: pointer;
-  ${defaultTheme.font.sebangGothic};
+  ${defaultTheme.font.inter};
   ${defaultTheme.fontSize.sizeExtraSmall};
   color: ${defaultTheme.fontColor.whiteColor};
   background-color: ${defaultTheme.colors.polarSimpleMain};

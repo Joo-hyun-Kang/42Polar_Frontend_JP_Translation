@@ -52,6 +52,7 @@ declare module 'styled-components' {
     };
 
     font: {
+      inter: string;
       sebangGothic: string;
       nanumGothic: string;
     };

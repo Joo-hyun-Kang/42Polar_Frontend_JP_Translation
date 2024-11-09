@@ -122,7 +122,7 @@ const Wrapper = styled.div`
 const ApplyContainer = styled.body`
   left: 0;
   ${theme.fontSize.sizeMedium};
-  ${theme.font.sebangGothic};
+  ${theme.font.inter};
   height: 100%;
   width: 100%;
   display: grid;
@@ -143,7 +143,7 @@ const ApplyContainer = styled.body`
 const MovApplyContainer = styled.div`
   left: 0;
   ${theme.fontSize.sizeMedium};
-  ${theme.font.sebangGothic};
+  ${theme.font.inter};
   height: calc(100% - 205px);
   width: 100%;
   display: grid;
@@ -255,7 +255,7 @@ const PlanButton1 = styled.button`
   box-shadow: ${theme.shadow.buttonShadow};
   text-align: center;
   flex-wrap: wrap;
-  ${theme.font.sebangGothic};
+  ${theme.font.inter};
   font-size: 2rem;
   color: ${theme.fontColor.whiteColor};
   background-color: ${theme.colors.polarSimpleMain};
@@ -274,7 +274,7 @@ const MovPlanButton1 = styled.button`
   box-shadow: ${theme.shadow.buttonShadow};
   text-align: center;
   flex-wrap: wrap;
-  ${theme.font.sebangGothic};
+  ${theme.font.inter};
   font-size: 2rem;
   color: ${theme.fontColor.whiteColor};
   background-color: ${theme.colors.polarSimpleMain};
@@ -294,7 +294,7 @@ const PlanButton2 = styled.button`
   word-break: break-all;
   white-space: pre-wrap;
   box-shadow: ${theme.shadow.buttonShadow};
-  ${theme.font.sebangGothic};
+  ${theme.font.inter};
   font-size: 2rem;
   text-align: center;
   color: ${theme.fontColor.whiteColor};
@@ -312,7 +312,7 @@ const MovPlanButton2 = styled.button`
   justify-content: center;
   align-items: center;
   box-shadow: ${theme.shadow.buttonShadow};
-  ${theme.font.sebangGothic};
+  ${theme.font.inter};
   font-size: 2rem;
   text-align: center;
   color: ${theme.fontColor.whiteColor};
@@ -371,7 +371,7 @@ const MovLine2 = styled.div`
 const MainText = styled.span`
   box-sizing: border-box;
   border-bottom: 1px solid black;
-  ${theme.font.sebangGothic};
+  ${theme.font.inter};
   ${theme.fontWeight.weightLarge};
   ${theme.fontSize.sizeExtraMedium};
 `;
@@ -382,7 +382,7 @@ const MainTextNoLine = styled.div`
   align-items: center;
   align-content: center;
   justify-content: center;
-  ${theme.font.sebangGothic};
+  ${theme.font.inter};
   ${theme.fontWeight.weightLarge};
   ${theme.fontSize.sizeExtraMedium};
 `;
@@ -401,13 +401,13 @@ const MainText2 = styled.span`
   border-bottom: 1px solid black;
   ${theme.fontWeight.weightLarge};
   text-align: center;
-  ${theme.font.sebangGothic};
+  ${theme.font.inter};
   ${theme.fontSize.sizeExtraMedium};
 `;
 
 const MiddleText = styled.div`
   margin-top: 4rem;
-  ${theme.font.sebangGothic};
+  ${theme.font.inter};
   color: ${theme.colors.grayTwo};
   ${theme.fontSize.sizeExtraSmall};
 `;
@@ -453,7 +453,7 @@ const ApplyButton = styled.button`
   box-shadow: ${theme.shadow.buttonShadow};
   text-align: center;
   ${theme.fontSize.sizeExtraSmall};
-  ${theme.font.sebangGothic};
+  ${theme.font.inter};
   color: ${theme.fontColor.whiteColor};
   background-color: ${theme.colors.polarSimpleMain};
   border-radius: 20px;

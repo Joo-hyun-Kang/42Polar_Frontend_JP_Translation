@@ -14,7 +14,7 @@ export const Topic = styled.div`
   justify-content: right;
   align-items: center;
   width: 40px;
-  ${defaultTheme.font.sebangGothic};
+  ${defaultTheme.font.inter};
   ${defaultTheme.fontSize.sizeMedium};
 `;
 

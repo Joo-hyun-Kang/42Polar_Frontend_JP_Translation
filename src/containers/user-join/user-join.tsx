@@ -97,7 +97,7 @@ const ButtonWrapper = styled(Link)`
 const Button = styled.button`
   display: flex;
   ${defaultTheme.fontSize.sizeSmall};
-  ${defaultTheme.font.sebangGothic};
+  ${defaultTheme.font.inter};
   border-radius: 5px;
   border: none;
   text-align: center;

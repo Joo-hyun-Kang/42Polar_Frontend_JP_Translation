@@ -23,7 +23,7 @@ export const ToggleContainer = styled.p`
 export const NameTitle = styled.h2`
   font-weight: 400;
   font-size: 2rem;
-  ${defaultTheme.font.sebangGothic};
+  ${defaultTheme.font.inter};
   padding-left: 20px;
   padding-bottom: 0px;
   padding-top: 0px;
@@ -83,5 +83,5 @@ export const DeleteButtonImage = styled.img`
 
 export const BodyBigFont = styled.p`
   ${defaultTheme.fontFrame.bodyMiddle};
-  ${defaultTheme.font.sebangGothic};
+  ${defaultTheme.font.inter};
 `;

@@ -195,7 +195,7 @@ function DataRoom() {
             setOffset(tmpOffset);
           } else {
             ErrorStore.on(
-              '데이터를 가져오는 중 오류가 발생하였습니다.',
+              'データを取得中にエラーが発生しました。',
               ERROR_DEFAULT_VALUE.TITLE,
             );
           }
@@ -207,7 +207,7 @@ function DataRoom() {
             ErrorStore.on(message, ERROR_DEFAULT_VALUE.TITLE);
           } else
             ErrorStore.on(
-              '데이터를 가져오는 중 오류가 발생하였습니다.',
+              'データを取得中にエラーが発生しました。',
               ERROR_DEFAULT_VALUE.TITLE,
             );
           if (error.response?.status === 401 || error.response?.status === 403)
@@ -219,7 +219,7 @@ function DataRoom() {
         });
     } catch (error) {
       ErrorStore.on(
-        '데이터를 가져오는 중 오류가 발생하였습니다.',
+        'データを取得中にエラーが発生しました。',
         ERROR_DEFAULT_VALUE.TITLE,
       );
     }
@@ -243,7 +243,7 @@ function DataRoom() {
       } else {
         LoadingStore.off();
         ErrorStore.on(
-          '레포트 상태를 변경하는 도중 오류가 발생하였습니다.',
+          'レーポットの状態の更新中にエラーが発生しました。',
           ERROR_DEFAULT_VALUE.TITLE,
         );
         return;
@@ -251,7 +251,7 @@ function DataRoom() {
     } catch (error) {
       LoadingStore.off();
       ErrorStore.on(
-        '레포트 상태를 변경하는 도중 오류가 발생하였습니다.',
+        'レーポットの状態の更新中にエラーが発生しました。',
         ERROR_DEFAULT_VALUE.TITLE,
       );
       return;
@@ -280,7 +280,7 @@ function DataRoom() {
       } else {
         LoadingStore.off();
         ErrorStore.on(
-          '레포트 상태를 변경하는 도중 오류가 발생하였습니다.',
+          'レーポットの状態の更新中にエラーが発生しました。',
           ERROR_DEFAULT_VALUE.TITLE,
         );
         return;
@@ -288,7 +288,7 @@ function DataRoom() {
     } catch (error) {
       LoadingStore.off();
       ErrorStore.on(
-        '레포트 상태를 변경하는 도중 오류가 발생하였습니다.',
+        'レーポットの状態の更新中にエラーが発生しました。',
         ERROR_DEFAULT_VALUE.TITLE,
       );
       return;
@@ -309,7 +309,7 @@ function DataRoom() {
 
     if (selectedList.length === 0) {
       LoadingStore.off();
-      setErrorModalMsg('멘토링 정보를 하나 이상 선택해주세요.');
+      setErrorModalMsg('メンタリング情報を1つ以上選択してください。');
       setErrorModal(true);
       return;
     }
@@ -327,7 +327,7 @@ function DataRoom() {
       } else {
         LoadingStore.off();
         ErrorStore.on(
-          '레포트 상태를 변경하는 도중 오류가 발생하였습니다.',
+          'レーポットの状態の更新中にエラーが発生しました。',
           ERROR_DEFAULT_VALUE.TITLE,
         );
         return;
@@ -335,7 +335,7 @@ function DataRoom() {
     } catch (error) {
       LoadingStore.off();
       ErrorStore.on(
-        '레포트 상태를 변경하는 도중 오류가 발생하였습니다.',
+        'レーポットの状態の更新中にエラーが発生しました。',
         ERROR_DEFAULT_VALUE.TITLE,
       );
       return;
@@ -356,7 +356,7 @@ function DataRoom() {
 
     if (selectedList.length === 0) {
       LoadingStore.off();
-      setErrorModalMsg('멘토링 정보를 하나 이상 선택해주세요.');
+      setErrorModalMsg('メンタリング情報を1つ以上選択してください。');
       setErrorModal(true);
       return;
     }
@@ -374,7 +374,7 @@ function DataRoom() {
       } else {
         LoadingStore.off();
         ErrorStore.on(
-          '레포트 상태를 변경하는 도중 오류가 발생하였습니다.',
+          'レーポットの状態の更新中にエラーが発生しました。',
           ERROR_DEFAULT_VALUE.TITLE,
         );
         return;
@@ -382,7 +382,7 @@ function DataRoom() {
     } catch (error) {
       LoadingStore.off();
       ErrorStore.on(
-        '레포트 상태를 변경하는 도중 오류가 발생하였습니다.',
+        'レーポットの状態の更新中にエラーが発生しました。',
         ERROR_DEFAULT_VALUE.TITLE,
       );
       return;
@@ -402,7 +402,7 @@ function DataRoom() {
 
     if (selectedList.length === 0) {
       LoadingStore.off();
-      setErrorModalMsg('멘토링 정보를 하나 이상 선택해주세요.');
+      setErrorModalMsg('メンタリング情報を1つ以上選択してください。');
       setErrorModal(true);
       return;
     }
@@ -437,7 +437,7 @@ function DataRoom() {
       } else {
         LoadingStore.off();
         ErrorStore.on(
-          '엑셀 데이터를 가져오는 중 오류가 발생하였습니다.',
+          'Excelデータを取得中にえらーが発生しました。',
           ERROR_DEFAULT_VALUE.TITLE,
         );
         return;
@@ -445,7 +445,57 @@ function DataRoom() {
     } catch (error) {
       LoadingStore.off();
       ErrorStore.on(
-        '엑셀 데이터를 가져오는 중 오류가 발생하였습니다.',
+        'Excelデータを取得中にえらーが発生しました。',
+        ERROR_DEFAULT_VALUE.TITLE,
+      );
+      return;
+    }
+
+    LoadingStore.off();
+  };
+
+  const getExcelAll = async () => {
+    LoadingStore.on();
+    const realurl = `${process.env.REACT_APP_BASE_BACKEND_URL}/bocals/data-room/all/excel`;
+
+    try {
+      const res = await fetch(realurl, {
+        method: 'POST',
+        headers: {
+          Authorization: `bearer ${AuthStore.getAccessToken()}`,
+        },
+      });
+
+      if (res.status === 201) {
+        const blob = await res.blob();
+        const newBlob = new Blob([blob]);
+        const blobUrl = window.URL.createObjectURL(newBlob);
+
+        const link = document.createElement('a');
+        link.href = blobUrl;
+        link.setAttribute(
+          'download',
+          `mentoring-data_${NowDateKr()
+            .toLocaleDateString('ko-KR')
+            .replaceAll(' ', '')}xlsx`,
+        );
+        document.body.appendChild(link);
+        link.click();
+        link?.parentNode?.removeChild(link);
+
+        window.URL.revokeObjectURL(blobUrl);
+      } else {
+        LoadingStore.off();
+        ErrorStore.on(
+          'Excelデータを取得中にえらーが発生しました。',
+          ERROR_DEFAULT_VALUE.TITLE,
+        );
+        return;
+      }
+    } catch (error) {
+      LoadingStore.off();
+      ErrorStore.on(
+        'Excelデータを取得中にえらーが発生しました。',
         ERROR_DEFAULT_VALUE.TITLE,
       );
       return;
@@ -459,7 +509,7 @@ function DataRoom() {
     let url = '/report-detail?autoPrint=true';
     if (selectedList.length === 0) {
       LoadingStore.off();
-      setErrorModalMsg('멘토링 정보를 하나 이상 선택해주세요.');
+      setErrorModalMsg('メンタリング情報を一つ以上選択してください');
       setErrorModal(true);
       return;
     }
@@ -469,23 +519,23 @@ function DataRoom() {
   }
 
   if (!AuthStore.getAccessToken()) {
-    ErrorStore.on('로그인이 필요한 서비스입니다.', ERROR_DEFAULT_VALUE.TITLE);
+    ErrorStore.on('ログインが必要なサービスです。', ERROR_DEFAULT_VALUE.TITLE);
     AuthStore.Login();
     return <></>;
   } else if (AuthStore.getUserRole() !== USER_ROLES.BOCAL) {
-    ErrorStore.on('접근 권한이 없습니다.', ERROR_DEFAULT_VALUE.TITLE);
+    ErrorStore.on('アクセス権限がありません。', ERROR_DEFAULT_VALUE.TITLE);
     return <Navigate to="/" />;
   } else
     return (
       <>
         {errorModal && (
           <OneButtonModal
-            TitleText="⚠️ 42폴라 경고"
+            TitleText="⚠️ 42Polar 警告"
             Text={errorModalMsg}
             XButtonFunc={() => {
               setErrorModal(false);
             }}
-            ButtonText="닫기"
+            ButtonText="閉じる"
             ButtonBg="gray"
             ButtonFunc={() => {
               setErrorModal(false);
@@ -495,7 +545,7 @@ function DataRoom() {
         {!isLoading && (
           <DataRoomDiv>
             <DataRoomBodyForDesktop>
-              <DataRoomTitle>데이터룸</DataRoomTitle>
+              <DataRoomTitle>データルーム</DataRoomTitle>
               <DataRoomButtonDiv>
                 <DataRoomButton>
                   {isOpenModal && (
@@ -509,35 +559,50 @@ function DataRoom() {
                       />
                     </>
                   )}
-                  <DRButton text="정렬" onClick={onClickSearchBoxModal} />
+                  <DRButton text="ソート" onClick={onClickSearchBoxModal} />
                 </DataRoomButton>
                 <DataRoomButton>
-                  <DRButton text="출력" onClick={printReports} />
+                  <DRButton text="出力" onClick={printReports} />
                 </DataRoomButton>
                 <DataRoomButton>
-                  <DRButton text="엑셀 저장" onClick={getExcel} />
+                  <DRButton
+                    text="選択をExcel保存"
+                    width="15rem"
+                    onClick={getExcel}
+                  />
+                </DataRoomButton>
+                <DataRoomButton>
+                  <DRButton
+                    text="全データをExcel保存"
+                    width="18rem"
+                    onClick={getExcelAll}
+                  />
                 </DataRoomButton>
                 <DataRoomButton>
                   <DRButtonReport
-                    text="선택수정"
+                    text="選択修正"
+                    width="10rem"
                     onClick={SetReportStatusToModify}
                   />
                 </DataRoomButton>
                 <DataRoomButton>
                   <DRButtonReport
-                    text="선택완료"
+                    text="選択完了"
+                    width="10rem"
                     onClick={SetReportStatusToDone}
                   />
                 </DataRoomButton>
                 <DataRoomButton>
                   <DRButtonReportAll
-                    text="전체수정"
+                    text="全体修正"
+                    width="10rem"
                     onClick={SetReportStatusAllToModify}
                   />
                 </DataRoomButton>
                 <DataRoomButton>
                   <DRButtonReportAll
-                    text="전체완료"
+                    text="全体完了"
+                    width="10rem"
                     onClick={SetReportStatusAllToDone}
                   />
                 </DataRoomButton>

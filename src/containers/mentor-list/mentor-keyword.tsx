@@ -5,7 +5,7 @@ import MentorsStore from '../../states/mentor-list/MentorsStore';
 import defaultTheme from '../../styles/theme';
 
 export const KeywordButton = styled.button`
-  ${defaultTheme.font.sebangGothic};
+  ${defaultTheme.font.inter};
   ${defaultTheme.fontSize.sizeExtraSmall};
   display: flex;
   justify-content: center;

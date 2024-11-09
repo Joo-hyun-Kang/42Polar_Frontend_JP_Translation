@@ -14,7 +14,7 @@ export const ReportRowTitle = styled.div`
   justify-content: center;
   align-items: center;
   ${defaultTheme.fontSize.sizeMedium};
-  ${defaultTheme.font.sebangGothic};
+  ${defaultTheme.font.inter};
 `;
 
 export const ReportRowContent = styled.div`

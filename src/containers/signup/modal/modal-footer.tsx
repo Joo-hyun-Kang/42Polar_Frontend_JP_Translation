@@ -20,7 +20,7 @@ const ModalFooterContainer = styled.div`
 `;
 
 const Button = styled.div`
-  ${defaultTheme.font.sebangGothic};
+  ${defaultTheme.font.inter};
   ${defaultTheme.fontSize.sizeExtraSmall};
   color: ${defaultTheme.fontColor.whiteColor};
   display: flex;

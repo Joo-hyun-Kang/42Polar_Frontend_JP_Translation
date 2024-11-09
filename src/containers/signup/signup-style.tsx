@@ -46,7 +46,7 @@ export const OptionWrapper = styled.div`
 `;
 
 export const HeadLetters = styled.h1`
-  ${defaultTheme.font.sebangGothic};
+  ${defaultTheme.font.inter};
   font-size: 2.5rem;
   font-weight: 400;
   padding-left: 10rem;
@@ -62,7 +62,7 @@ export const SingupImage = styled.img`
 export const NameTitle = styled.h2`
   font-weight: 400;
   font-size: 2rem;
-  ${defaultTheme.font.sebangGothic};
+  ${defaultTheme.font.inter};
   padding-left: 20px;
   padding-bottom: 5px;
 `;
@@ -79,7 +79,7 @@ export const InfoInput = styled.input`
   border-right: 0px;
   border-top: 0px;
   font-size: 19;
-  ${theme.font.sebangGothic};
+  ${theme.font.inter};
   ${theme.fontWeight.weightSmall};
   ${theme.fontSize.sizeExtraSmall};
 `;
@@ -182,7 +182,7 @@ export const DeleteButtonImage = styled.img`
 
 export const BodyBigFont = styled.p`
   ${defaultTheme.fontFrame.bodyMiddle};
-  ${defaultTheme.font.sebangGothic};
+  ${defaultTheme.font.inter};
 `;
 
 export const ToggleContainer = styled.p`

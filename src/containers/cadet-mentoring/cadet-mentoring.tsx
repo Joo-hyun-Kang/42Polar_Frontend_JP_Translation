@@ -25,7 +25,7 @@ const NoneDrag = styled.body`
 `;
 
 const NoMentoringText = styled.div`
-  ${defaultTheme.font.sebangGothic};
+  ${defaultTheme.font.inter};
   ${defaultTheme.fontSize.sizeMedium};
   margin-top: 2rem;
 `;

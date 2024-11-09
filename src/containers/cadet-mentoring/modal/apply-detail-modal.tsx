@@ -24,7 +24,7 @@ const Box = styled.div`
 const PageTitle = styled.div`
   display: flex;
   justify-content: center;
-  ${defaultTheme.font.sebangGothic};
+  ${defaultTheme.font.inter};
   ${defaultTheme.fontSize.sizeMedium};
 `;
 
