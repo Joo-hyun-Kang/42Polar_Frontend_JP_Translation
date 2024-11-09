@@ -54,7 +54,7 @@ const LeftData = styled.div`
 `;
 
 const RightData = styled.div`
-  width: 50px;
+  width: 52px;
   padding: 5px;
   height: min-content;
   background-color: ${defaultTheme.colors.polarBrightMain};
@@ -130,11 +130,11 @@ const Bottom = styled.div`
 `;
 
 const getColor = (status: string): string => {
-  if (status === '대기중') {
+  if (status === 'お待ち中') {
     return defaultTheme.colors.polarBrightMain;
-  } else if (status === '확정') {
+  } else if (status === '確定') {
     return defaultTheme.colors.polarSimpleMain;
-  } else if (status === '취소') {
+  } else if (status === '取消') {
     return defaultTheme.colors.Red;
   } else {
     return defaultTheme.colors.grayTwo;

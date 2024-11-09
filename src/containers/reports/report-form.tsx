@@ -20,9 +20,9 @@ import { ReportFixableWithModal } from './elements/report-fixable-with-modal';
 import { TimePickerModal } from './elements/report-time-picker/time-picker-modal';
 
 export const REPORT_STATE = {
-  EDIT_POSSIBLE: '작성중',
-  EDIT_IMPOSSIBLE: '작성완료',
-  EDIT_ONLYONE: '수정기간',
+  EDIT_POSSIBLE: '作成中',
+  EDIT_IMPOSSIBLE: '作成完了',
+  EDIT_ONLYONE: '修正期間',
 };
 
 const NoneDrag = styled.div`

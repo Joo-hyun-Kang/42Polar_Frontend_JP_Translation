@@ -45,10 +45,10 @@ export interface ReportButtonProps {
 }
 
 const REPORT_BUTTON_STATUS = {
-  WRITING: '작성중',
-  WRITE_NEED: '작성필요',
-  WRITE_IMPOSSIBLE: '작성불가',
-  DONE: '작성완료',
+  WRITING: '作成中',
+  WRITE_NEED: '作成可能',
+  WRITE_IMPOSSIBLE: '作成不可',
+  DONE: '作成完了',
 };
 
 export function ReportButton(props: ReportButtonProps) {

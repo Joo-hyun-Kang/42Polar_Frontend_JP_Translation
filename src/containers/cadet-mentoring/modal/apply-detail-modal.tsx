@@ -35,7 +35,7 @@ const StatusBox = styled.div`
   color: ${defaultTheme.fontColor.whiteColor};
   display: flex;
   justify-content: center;
-  width: 50px;
+  width: 70px;
   padding: 0px 5px;
   margin-left: 20px;
   height: min-content;
@@ -86,10 +86,10 @@ export interface ApplyDetailModalProps {
 }
 
 export const MENTORING_STATUS = {
-  CANCLE: '취소',
-  WAITING: '대기중',
-  CONFIRM: '확정',
-  DONE: '완료',
+  CANCLE: '取消',
+  WAITING: 'お待ち中',
+  CONFIRM: '確定',
+  DONE: '完了',
 };
 
 export function ApplyDetailModal(props: ApplyDetailModalProps) {
@@ -137,7 +137,7 @@ export function ApplyDetailModal(props: ApplyDetailModalProps) {
         </StatusBox>
       </ModalHeader>
       <ModalBody>
-        {props.status === '대기중' ? (
+        {props.status === 'お待ち中' ? (
           <Wait
             content={props.content}
             mentoringTopic={props.mentoringTopic}

@@ -50,7 +50,7 @@ export function Confirm(props: ConfirmProps) {
         content={props?.mentoringTopic}
       />
       <ModalInfoElement
-        title={props.isReject ? '취소 사유' : '질문 내용'}
+        title={props.isReject ? '取消 사유' : '질문 내용'}
         titleColor={defaultTheme.colors.polarSimpleMain}
         content={''}
       />

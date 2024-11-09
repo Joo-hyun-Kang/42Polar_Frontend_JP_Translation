@@ -72,7 +72,7 @@ export function Header(props: ResumeProps) {
     try {
       axiosWithData(
         AXIOS_METHOD_WITH_DATA.POST,
-        '/cadets',
+        '/cadets/url',
         { resumeUrl },
         {
           headers: {

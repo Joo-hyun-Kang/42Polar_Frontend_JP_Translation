@@ -38,10 +38,10 @@ const LinkStatusColumn = styled.div`
 `;
 
 const MENTORING_STATUS = {
-  WAIT: '대기중',
-  CONFIRM: '확정',
-  DONE: '완료',
-  CANCLE: '취소',
+  WAIT: 'お待ち中',
+  CONFIRM: '確定',
+  DONE: '完了',
+  CANCLE: '取消',
 };
 
 export interface ReportButtonProps {

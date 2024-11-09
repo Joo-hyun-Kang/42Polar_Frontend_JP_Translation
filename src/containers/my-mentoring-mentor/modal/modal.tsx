@@ -92,13 +92,13 @@ export function ApplyModal(props: ApplyDetailModalContainerProps) {
                 requestTime={props?.log?.meta?.requestTime}
                 button1={{
                   content: `${
-                    props?.log?.status === '대기중' ? '수락' : '거절'
+                    props?.log?.status === 'お待ち中' ? '수락' : '거절'
                   }`,
                   bg: `${defaultTheme.colors.polarSimpleMain}`,
                 }}
                 button2={{
                   content: `${
-                    props?.log?.status === '대기중' ? '거절' : '나가기'
+                    props?.log?.status === 'お待ち中' ? '거절' : '나가기'
                   }`,
                   bg: 'gray',
                 }}

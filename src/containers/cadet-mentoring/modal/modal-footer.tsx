@@ -55,7 +55,7 @@ export function ModalFooter(props: ModalFooterProps) {
     LoadingStore.on();
 
     await axiosWithData(
-      AXIOS_METHOD_WITH_DATA.PACTH,
+      AXIOS_METHOD_WITH_DATA.POST,
       `/mentoring-logs/reject`,
       {
         mentoringLogId: mentoringLogId,
@@ -68,7 +68,7 @@ export function ModalFooter(props: ModalFooterProps) {
       },
     )
       .then(() => {
-        props.setModalText('해당 멘토링이 취소되었습니다.');
+        props.setModalText('해당 멘토링이 取消되었습니다.');
         props.setModal(true);
       })
       .catch(err => {
@@ -86,7 +86,7 @@ export function ModalFooter(props: ModalFooterProps) {
             onClick={() => {
               if (props?.rejectReason?.length < 1) {
                 ErrorStore.on(
-                  '취소 사유를 입력해주세요',
+                  '取消 사유를 입력해주세요',
                   ERROR_DEFAULT_VALUE.TITLE,
                 );
                 return;
@@ -98,7 +98,7 @@ export function ModalFooter(props: ModalFooterProps) {
               );
             }}
           >
-            취소
+            取消
           </Button>
           <Button
             style={{ backgroundColor: 'gray' }}
@@ -111,7 +111,7 @@ export function ModalFooter(props: ModalFooterProps) {
         </ModalFooterContainer>
       )}
 
-      {(props.status === '대기중' || props.status === '확정') &&
+      {(props.status === 'お待ち中' || props.status === '確定') &&
         !props.isReject && (
           <ModalFooterContainer>
             <Button
@@ -120,13 +120,13 @@ export function ModalFooter(props: ModalFooterProps) {
                 props.setIsReject(true);
               }}
             >
-              취소
+              取消
             </Button>
           </ModalFooterContainer>
         )}
 
-      {props.status !== '대기중' &&
-        props.status !== '확정' &&
+      {props.status !== 'お待ち中' &&
+        props.status !== '確定' &&
         !props.isReject && <ModalFooterContainer />}
     </>
   );
