@@ -46,7 +46,7 @@ const CalendarDiv = styled.div`
   .react-calendar__navigation__arrow {
     justify-content: center;
     align-items: center;
-    font-family: 'SEBANG Gothic';
+    font-family: 'inter';
     font-size: 2.5rem;
   }
   .react-calendar__tile {

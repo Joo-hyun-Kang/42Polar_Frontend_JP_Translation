@@ -192,7 +192,7 @@ const Header = () => {
 
   const AlertDetail = () => {
     ErrorStore.on(
-      '카뎃은 자동 로그아웃됩니다!\n 9월 19~20일 comming soon~ :)',
+      'カデットは自動ログアウトされております!\n 9월 19~20일 comming soon~ :)',
       ERROR_DEFAULT_VALUE.TITLE,
     );
     removeCookie(TOKEN_LIST.ACCESS_TOKEN, DEFAULT_COOKIE_OPTION);
@@ -241,7 +241,7 @@ const Header = () => {
                   AuthStore.Logout();
                 }}
               >
-                로그아웃
+                ログアウト
               </MovLoginButton>
             ) : (
               <MovLoginButton
@@ -250,7 +250,7 @@ const Header = () => {
                   AuthStore.Login();
                 }}
               >
-                로그인
+                ログイン
               </MovLoginButton>
             )}
             {AuthStore.getUserRole() === USER_ROLES.CADET ? (
@@ -261,9 +261,9 @@ const Header = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <MovSuggestionButton>건의사항</MovSuggestionButton>
+                  <MovSuggestionButton>お問合せ</MovSuggestionButton>
                   <Link to={'/cadets/mentorings'}>
-                    <MovMyMentoringButton>마이페이지</MovMyMentoringButton>
+                    <MovMyMentoringButton>マイページ</MovMyMentoringButton>
                   </Link>
                 </a>
               </div>
@@ -274,13 +274,13 @@ const Header = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <MovSuggestionButton>건의사항</MovSuggestionButton>
+                  <MovSuggestionButton>お問合せ</MovSuggestionButton>
                 </a>
                 <Link to={mlinks}>
-                  <MovMyMentoringButton>나의 멘토링</MovMyMentoringButton>
+                  <MovMyMentoringButton>私のメンタリング</MovMyMentoringButton>
                 </Link>
                 <Link to={mdlinks}>
-                  <MovMypageButton>마이페이지</MovMypageButton>
+                  <MovMypageButton>マイページ</MovMypageButton>
                 </Link>
               </div>
             ) : AuthStore.getUserRole() === USER_ROLES.BOCAL ? (
@@ -290,10 +290,10 @@ const Header = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <MovSuggestionButton>건의사항</MovSuggestionButton>
+                  <MovSuggestionButton>お問合せ</MovSuggestionButton>
                 </a>
                 <Link to="/data-room" reloadDocument={true}>
-                  <MovDataRoomButton>데이터룸</MovDataRoomButton>
+                  <MovDataRoomButton>データルーム</MovDataRoomButton>
                 </Link>
               </div>
             ) : (
@@ -303,7 +303,7 @@ const Header = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <MovSuggestionButton>건의사항</MovSuggestionButton>
+                  <MovSuggestionButton>お問い合わせ</MovSuggestionButton>
                 </a>
               </div>
             )}
@@ -326,7 +326,7 @@ const Header = () => {
                   AuthStore.Logout();
                 }}
               >
-                로그아웃
+                ログアウト
               </LoginButton>
             ) : (
               <LoginButton
@@ -335,7 +335,7 @@ const Header = () => {
                   AuthStore.Login();
                 }}
               >
-                로그인
+                ログイン
               </LoginButton>
             )}
             {AuthStore.getUserRole() === USER_ROLES.CADET ? (
@@ -348,7 +348,7 @@ const Header = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <SuggestionButton>건의사항</SuggestionButton>
+                  <SuggestionButton>お問合せ</SuggestionButton>
                   <Link to={'/cadets/mentorings'}>
                     <MyMentoringButton>마이페이지</MyMentoringButton>
                   </Link>
@@ -361,13 +361,13 @@ const Header = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <SuggestionButton>건의사항</SuggestionButton>
+                  <SuggestionButton>お問合せ</SuggestionButton>
                 </a>
                 <Link to={mlinks}>
-                  <MyMentoringButton>나의 멘토링</MyMentoringButton>
+                  <MyMentoringButton>私のメンタリング</MyMentoringButton>
                 </Link>
                 <Link to={mdlinks}>
-                  <MypageButton>마이페이지</MypageButton>
+                  <MypageButton>マイページ</MypageButton>
                 </Link>
               </div>
             ) : AuthStore.getUserRole() === USER_ROLES.BOCAL ? (
@@ -377,10 +377,10 @@ const Header = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <SuggestionButton>건의사항</SuggestionButton>
+                  <SuggestionButton>お問合せ</SuggestionButton>
                 </a>
                 <Link to="/data-room" reloadDocument={true}>
-                  <DataRoomButton>데이터룸</DataRoomButton>
+                  <DataRoomButton>データルーム</DataRoomButton>
                 </Link>
               </div>
             ) : (
@@ -390,7 +390,7 @@ const Header = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <SuggestionButton>건의사항</SuggestionButton>
+                  <SuggestionButton>お問合せ</SuggestionButton>
                 </a>
               </div>
             )}

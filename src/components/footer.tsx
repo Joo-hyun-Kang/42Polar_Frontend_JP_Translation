@@ -75,22 +75,22 @@ const Footer = () => {
           <GithubButton></GithubButton>
           <FooterRightBody>
             <FooterButtonOne>
-              <AtagTwo href="https://docs.google.com/forms/d/e/1FAIpQLSeNhqMlp2cFqMKQo664P0j_GiELhy_VNDSIClFenQJ3uoPa2Q/viewform?usp=send_form">
-                사이트 건의사항
+              <AtagTwo href={process.env.REACT_APP_BASE_FORM_URL}>
+                42Polarに関するお問い合わせ
               </AtagTwo>
             </FooterButtonOne>
             <FooterButtonTwo>
-              <AtagTwo href="https://docs.google.com/forms/d/e/1FAIpQLSe7CJGFRImjU0NAtPwjWdjTz9-Chttx1gDf1rpvBZIhaUQ34A/viewform">
-                멘토제도 문의(SongPD)
+              <AtagTwo href={process.env.REACT_APP_BASE_FORM_URL}>
+                メンタリング制度に関するお問い合わせ（運営陣）
               </AtagTwo>
             </FooterButtonTwo>
           </FooterRightBody>
         </FooterTextBody>
-        <FooterBody>
-          주소 서울시 강남구 개포로 416 이노베이션 아카데미
-        </FooterBody>
-        <FooterBody>copyright 2022 polar All rights reserved.</FooterBody>
-        <FooterLastBody>폴라팀에게 문의하기 : 42polar@gmail.com</FooterLastBody>
+        <FooterBody>住所 東京都港区白金1丁目7-6</FooterBody>
+        <FooterBody>copyright 2024 polar All rights reserved.</FooterBody>
+        <FooterLastBody>
+          Polarチームへのお問い合わせ : autoba9687@gmail.com
+        </FooterLastBody>
       </div>
     </FooterStyle>
   );

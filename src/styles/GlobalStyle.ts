@@ -4,7 +4,7 @@ import defaultTheme from './theme';
 const GlobalStyle = createGlobalStyle`
   button{
     display:flex;
-    font-family: 'SEBANG Gothic';
+    font-family: 'inter';
     outline: none;
   }
   body {

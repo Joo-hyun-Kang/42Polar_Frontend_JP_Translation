@@ -33,7 +33,7 @@ export const muiPaginationTheme = createTheme({
     },
   },
   typography: {
-    fontFamily: 'SEBANG Gothic',
+    fontFamily: 'inter',
     fontSize: 20,
     fontWeightLight: 700,
   },
