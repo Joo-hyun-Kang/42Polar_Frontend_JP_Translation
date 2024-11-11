@@ -176,7 +176,7 @@ export const ReportRowSignature = observer(() => {
   const [signatureBlock, setSignatureBlock] = useState<boolean>(false);
 
   /**
-   * 드래그 앤 드랍 함수 ..
+   * ドラッグアンドドロップ関数
    */
   const dragRef = useRef<HTMLLabelElement | null>(null);
   const [isDrag, setIsDrag] = useState<boolean>(false);
@@ -248,14 +248,14 @@ export const ReportRowSignature = observer(() => {
       }
       if (ReportStore.report.imageUrl.length >= 2) {
         ErrorStore.on(
-          '사진 파일은 최대 2개까지 업로드 할 수 있습니다.',
+          '写真ファイルは最大２個までアップロードできます。',
           ERROR_DEFAULT_VALUE.TITLE,
         );
         return;
       }
       if (selectedFile.size > 3000000) {
         ErrorStore.on(
-          '3MB 이상 사진 파일은 업로드할 수 없습니다.',
+          '3MB以上の写真ファイルはアップロードできません。',
           ERROR_DEFAULT_VALUE.TITLE,
         );
         return;
@@ -294,7 +294,7 @@ export const ReportRowSignature = observer(() => {
           style={{ display: 'none' }}
         />
         {ReportStore.report.status !== REPORT_STATE.EDIT_IMPOSSIBLE && (
-          <Button onClick={uploadImg}>가져오기</Button>
+          <Button onClick={uploadImg}>取り込む</Button>
         )}
       </>
     );
@@ -311,8 +311,8 @@ export const ReportRowSignature = observer(() => {
       )}
       {deleteModal && (
         <OneButtonModal
-          TitleText="⚠️ 삭제 확인"
-          Text={`정말 삭제하시겠습니까?\n삭제된 파일은 복구할 수 없습니다.`}
+          TitleText="⚠️ 削除の確認"
+          Text={`本当に削除しますか？\n削除されたファイルは元に戻せません。`}
           XButtonFunc={() => {
             setDeleteModal(false);
           }}
@@ -324,19 +324,19 @@ export const ReportRowSignature = observer(() => {
               imageIndex,
             );
           }}
-          ButtonText="확인"
+          ButtonText="確認"
           ButtonBg={defaultTheme.colors.Red}
         />
       )}
       <Left>
         <SignatureTitleContainer>
-          <SignatureTitle>서명란</SignatureTitle>
+          <SignatureTitle>署名欄</SignatureTitle>
         </SignatureTitleContainer>
         <SignatureContainer>
           {ReportStore.report.signatureUrl ? (
             <UploadFileBox src={ReportStore.report.signatureUrl} />
           ) : (
-            '서명 필요'
+            '署名の必要'
           )}
         </SignatureContainer>
         {ReportStore.report.status !== REPORT_STATE.EDIT_IMPOSSIBLE && (
@@ -350,7 +350,7 @@ export const ReportRowSignature = observer(() => {
                   );
                 }}
               >
-                삭제
+                削除
               </Button>
             )}
             <Button
@@ -358,17 +358,17 @@ export const ReportRowSignature = observer(() => {
                 setSignatureBlock(true);
               }}
             >
-              열기
+              開く
             </Button>
           </ButtonRow>
         )}
         <SignatureTitleContainer>
-          <SignatureTitle>증빙사진</SignatureTitle>
+          <SignatureTitle>証明写真</SignatureTitle>
         </SignatureTitleContainer>
         <label ref={dragRef} style={{ width: '100%' }}>
           {isDrag || !ReportStore?.report?.imageUrl?.length ? (
             <UploadFileDraggingContainer>
-              여기에 파일을 드롭하세요.
+              こちらに写真をドロップしてください
             </UploadFileDraggingContainer>
           ) : (
             <UploadFileContainer>
@@ -395,12 +395,12 @@ export const ReportRowSignature = observer(() => {
       </Left>
 
       <Right>
-        <RightTitle>카뎃 신청 메세지</RightTitle>
-        <ReportSummaryTitle>&#183; 주제</ReportSummaryTitle>
+        <RightTitle>メンタリング詳細</RightTitle>
+        <ReportSummaryTitle>&#183; テーマ</ReportSummaryTitle>
         <ReportQuestion>
           {ReportStore.report.mentoringLogs.topic}
         </ReportQuestion>
-        <ReportSummaryTitle>&#183; 궁금한 점</ReportSummaryTitle>
+        <ReportSummaryTitle>&#183; 質問事項</ReportSummaryTitle>
         <ReportQuestion>
           {ReportStore.report.mentoringLogs.content}
         </ReportQuestion>

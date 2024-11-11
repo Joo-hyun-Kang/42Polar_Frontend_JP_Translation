@@ -45,7 +45,7 @@ export function ReportFixableWithModal(props: ReportFixableWithModalProps) {
             fontWeight: props.content || 'bold',
           }}
         >
-          {props.content ? props.content : '(입력 필요)'}
+          {props.content ? props.content : '(入力の必要)'}
         </Content>
         {props.isEditPossible && (
           <FixableIcon

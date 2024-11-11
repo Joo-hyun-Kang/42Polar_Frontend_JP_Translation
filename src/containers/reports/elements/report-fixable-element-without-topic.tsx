@@ -90,7 +90,7 @@ export function ReportFixableElementWithoutTopic(
                 >
                   {props.content
                     ? props.content
-                    : '(카뎃이 한 명 이상인 경우, 왼쪽과 같이 추가할 카뎃을 적어주세요.)'}
+                    : '(カデットが一名以上いる場合は, 記入してください。)'}
                 </Content>
                 <FixableIcon
                   onClick={() => {

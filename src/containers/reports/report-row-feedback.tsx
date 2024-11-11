@@ -38,11 +38,13 @@ interface ReportRowFeedbackProps {
 export function ReportRowFeedback(props: ReportRowFeedbackProps) {
   return (
     <ReportRowContainer>
-      <ReportRowTitle>피드백</ReportRowTitle>
+      <ReportRowTitle>フィードバック</ReportRowTitle>
       <ReportRowContent>
-        <ReportRowContentTitie>멘토링 피드백</ReportRowContentTitie>
+        <ReportRowContentTitie>
+          メンタリング フィードバック
+        </ReportRowContentTitie>
         <ReportFeedbackRow>
-          1. 교육생이 궁금한 것을 잘 정리해 왔나?
+          1. 生徒が質問をよく整理して持ってきたか？
           <Rating
             name="simple-controlled"
             defaultValue={5}
@@ -56,7 +58,7 @@ export function ReportRowFeedback(props: ReportRowFeedbackProps) {
           />
         </ReportFeedbackRow>
         <ReportFeedbackRow>
-          2. 교육생과 함께 한 시간이 만족스러웠나?
+          2. 生徒との時間は満足のいくものだったか？
           <Rating
             name="simple-controlled"
             defaultValue={5}
@@ -70,7 +72,7 @@ export function ReportRowFeedback(props: ReportRowFeedbackProps) {
           />
         </ReportFeedbackRow>
         <ReportFeedbackRow>
-          3. 교육생이 전달한 내용을 잘 이해했나?
+          3. 生徒が伝えた内容をよく理解したか？
           <Rating
             name="simple-controlled"
             defaultValue={5}

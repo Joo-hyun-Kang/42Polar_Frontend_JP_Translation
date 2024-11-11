@@ -26,10 +26,10 @@ export function Title(props: TitleProps) {
       <PageTitle>
         {props.title}
         {ReportStore.report.status === REPORT_STATE.EDIT_IMPOSSIBLE && (
-          <> (작성 완료됨, 수정불가)</>
+          <> (作成完了, 修正不可)</>
         )}
         {ReportStore.report.status === REPORT_STATE.EDIT_ONLYONE && (
-          <> (수정 기간, 제출 후에도 수정 가능)</>
+          <> (修正期間中, 提出後も修正可能)</>
         )}
       </PageTitle>
     </>

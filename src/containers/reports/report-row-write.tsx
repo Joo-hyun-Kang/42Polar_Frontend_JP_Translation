@@ -37,10 +37,10 @@ interface ReportRowWriteProps {
 export function ReportRowWrite(props: ReportRowWriteProps) {
   return (
     <ReportRowContainer>
-      <ReportRowTitle>보고서 작성</ReportRowTitle>
+      <ReportRowTitle>報告書 作成</ReportRowTitle>
       <ReportRowContent>
-        <ReportRowContentTitie>개요</ReportRowContentTitie>
-        <ReportSummaryTitle>&#183; 주제</ReportSummaryTitle>
+        <ReportRowContentTitie>概要</ReportRowContentTitie>
+        <ReportSummaryTitle>&#183; テーマ</ReportSummaryTitle>
         <InputCounter
           setter={props.setTopic}
           value={props.topic}
@@ -48,7 +48,7 @@ export function ReportRowWrite(props: ReportRowWriteProps) {
           countDisabled={!props.isEditPossible}
           inputDisabled={!props.isEditPossible}
         />
-        <ReportSummaryTitle>&#183; 내용</ReportSummaryTitle>
+        <ReportSummaryTitle>&#183; 内容</ReportSummaryTitle>
         <InputCounter
           setter={props.setContent}
           value={props.content}
@@ -56,7 +56,7 @@ export function ReportRowWrite(props: ReportRowWriteProps) {
           countDisabled={!props.isEditPossible}
           inputDisabled={!props.isEditPossible}
         />
-        <ReportSummaryTitle>&#183; 교육생에게 남기는 말</ReportSummaryTitle>
+        <ReportSummaryTitle>&#183; 生徒に伝えたいこと</ReportSummaryTitle>
         <InputCounter
           setter={props.setFeedbackMessage}
           value={props.feedbackMessage}
@@ -64,7 +64,7 @@ export function ReportRowWrite(props: ReportRowWriteProps) {
           countDisabled={!props.isEditPossible}
           inputDisabled={!props.isEditPossible}
           placeholder={
-            '🌟 해당 피드백 메시지는 멘토링을 진행한 교육생에게 전달됩니다! 🌟\n'
+            '🌟 該当のフィードバックメッセージは、メンタリングを受けた生徒に送信されます！ 🌟\n'
           }
         />
       </ReportRowContent>

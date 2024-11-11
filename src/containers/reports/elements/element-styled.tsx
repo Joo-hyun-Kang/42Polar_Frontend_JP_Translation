@@ -13,7 +13,7 @@ export const Topic = styled.div`
   display: flex;
   justify-content: right;
   align-items: center;
-  width: 40px;
+  width: 80px;
   ${defaultTheme.font.inter};
   ${defaultTheme.fontSize.sizeMedium};
 `;

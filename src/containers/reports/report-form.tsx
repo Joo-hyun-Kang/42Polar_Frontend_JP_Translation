@@ -110,7 +110,7 @@ export const getDayToString = (meetingAt: Date): string => {
   if (!meetingAt) {
     return '-';
   }
-  const date: string[] = ['일', '월', '화', '수', '목', '금', '토'];
+  const date: string[] = ['日', '月', '火', '水', '木', '金', '土'];
   const startTime: Date = meetingAt;
   if (!isValidTime(startTime)) {
     return '-';
@@ -122,8 +122,8 @@ export const getDayToString = (meetingAt: Date): string => {
 };
 
 /**
- * Date[2] 배열의 시간 간격을 리턴
- * - Date 형식이 아닌 변수는 빈 문자열 리턴
+ * Date[2] 配列の時刻の間隔を返す
+ * - Date 型ではなければ、からの文字列を返す
  * @param meetingAt :Date
  * @returns "14:00 ~ 15:00"
  */
@@ -227,12 +227,12 @@ const ReportForm = observer(() => {
     <NoneDrag>
       {modal && (
         <OneButtonModal
-          TitleText="📝 레포트 제출 확인"
-          Text={`정말 제출하시겠습니까?\n제출 이후에는 레포트를 수정할 수 없습니다.`}
+          TitleText="📝 レーポットの提出の確認"
+          Text={`本当に提出しますか？\n提出後には修正ができません。`}
           XButtonFunc={() => {
             setModal(false);
           }}
-          ButtonText="확인"
+          ButtonText="確認"
           ButtonBg={defaultTheme.colors.polarSimpleMain}
           ButtonFunc={() => {
             if (!reportId) {
@@ -255,21 +255,21 @@ const ReportForm = observer(() => {
       )}
       {isLoaded && (
         <Container component="main" maxWidth="lg" fixed={true}>
-          <Title title={'보고서 작성'} />
+          <Title title={'報告書 作成'} />
           <ReportContainer>
             <ReportInfoContainer>
               <ReportElement
-                topic={'구분'}
+                topic={'区分'}
                 content={
-                  ReportStore.report.cadets.isCommon ? '공통과정' : '심화과정'
+                  ReportStore.report.cadets.isCommon ? '共通過程' : '深化過程'
                 }
               />
               <ReportElement
-                topic={'날짜'}
+                topic={'日付'}
                 content={getDayToString(NewDateKr(startTime))}
               />
               <ReportFixableWithModal
-                topic={'시간'}
+                topic={'時間'}
                 content={getTimeToString([
                   NewDateKr(startTime),
                   NewDateKr(endTime),
@@ -278,18 +278,18 @@ const ReportForm = observer(() => {
                 modalSetter={setTimePicker}
               />
               <ReportFixableElement
-                topic={'장소'}
+                topic={'場所'}
                 content={place}
                 contentSetter={setPlace}
                 isEditPossible={IsEidt(isModify)}
                 maxLength={50}
               />
               <ReportElement
-                topic={'멘토'}
+                topic={'メンター'}
                 content={ReportStore.report.mentors.name}
               />
               <ReportElement
-                topic={'카뎃'}
+                topic={'カデット'}
                 content={
                   ReportStore.report.cadets.name +
                   '(' +
@@ -342,7 +342,7 @@ const ReportForm = observer(() => {
                     );
                   }}
                 >
-                  임시 저장
+                  一時保存
                 </DefaultButton>
               )}
               <DefaultButton
@@ -350,7 +350,7 @@ const ReportForm = observer(() => {
                   setModal(true);
                 }}
               >
-                제출
+                提出
               </DefaultButton>
             </ButtonContainer>
           )}

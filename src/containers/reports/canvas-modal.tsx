@@ -168,7 +168,7 @@ export function CanvasModal(props: CanvasModalProps) {
     }
     ctx.fillStyle = '#999';
     ctx.textAlign = 'center';
-    ctx.fillText('서명을 그려주세요', canvas.width / 2, canvas.height / 2);
+    ctx.fillText('署名を描いてください', canvas.width / 2, canvas.height / 2);
     canvas.addEventListener('mousedown', watermark, false);
   }, []);
 
@@ -241,7 +241,7 @@ export function CanvasModal(props: CanvasModalProps) {
       <CanvasModalBox>
         <CanvasTop>
           <CanvasModalTitle>
-            ✏️ 서명란{' '}
+            ✏️ 証明欄{' '}
             <FixableIcon
               onClick={() => {
                 clearCanvas();
@@ -270,7 +270,7 @@ export function CanvasModal(props: CanvasModalProps) {
               backgroundColor: defaultTheme.colors.polarSimpleMain,
             }}
           >
-            저장
+            保存
           </ModalButton>
         </ModalButtonContainer>
       </CanvasModalBox>
