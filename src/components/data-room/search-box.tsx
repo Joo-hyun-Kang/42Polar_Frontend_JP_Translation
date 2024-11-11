@@ -175,7 +175,7 @@ function SearchBox(props: SearchBoxProps) {
     >
       <SearchBoxBackground>
         <SearchBoxComponent>
-          멘토 이름
+          メンター
           <SearchBoxInput
             name="mentorName"
             value={mentorName}
@@ -185,7 +185,7 @@ function SearchBox(props: SearchBoxProps) {
           ></SearchBoxInput>
         </SearchBoxComponent>
         <SearchBoxComponent>
-          멘토 아이디
+          エンターID
           <SearchBoxInput
             name="mentorIntraId"
             value={mentorIntraId}
@@ -195,15 +195,15 @@ function SearchBox(props: SearchBoxProps) {
           ></SearchBoxInput>
         </SearchBoxComponent>
         <SearchBoxComponent>
-          멘토링 일자
+          年、月
           <BasicDatePicker value={date} setValue={setDate} />
         </SearchBoxComponent>
         <SearchButtonDiv>
           <SearchBoxButton
             type="button"
-            width="5.4rem"
+            width="7rem"
             height="1.9rem"
-            text="초기화"
+            text="リセット"
             font={theme.font.nanumGothic}
             fontFrame={theme.fontFrame.bodySmall}
             backgroundColor={theme.colors.backgoundWhite}
@@ -229,7 +229,7 @@ function SearchBox(props: SearchBoxProps) {
             type="submit"
             width="5.1rem"
             height="1.9rem"
-            text="검색"
+            text="検索"
             font={theme.font.nanumGothic}
             fontFrame={theme.fontFrame.bodySmall}
             backgroundColor={theme.colors.backgoundWhite}

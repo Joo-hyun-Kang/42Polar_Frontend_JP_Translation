@@ -115,7 +115,7 @@ function DataRoomListElement(
       <TableData>{data.status ?? ''}</TableData>
       <TableData>
         {data.updatedAt
-          ? NewDateKr(data.updatedAt).toLocaleString('ko-KR')
+          ? NewDateKr(data.updatedAt).toLocaleString('ja-JP')
           : ''}
       </TableData>
     </tr>

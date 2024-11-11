@@ -88,7 +88,7 @@ export const START_TIME = 0;
 export const END_TIME = 1;
 
 /**
- * 0 이상 10 미만의 숫자를 2자리 수로 만듦
+ * 0以上10未満の数字を2桁の数にする
  * @param time Any number
  * @returns 00, 01, 02... 09
  */
@@ -101,10 +101,10 @@ export const makeTimePair = (time: number) => {
 };
 
 /**
- * Date 변수를 스트링으로 변환
- * - Date 형식이 아닌 변수는 - 리턴
+ * Date変数を文字列に変換する
+ * Date形式でない変数の場合は "-" を返す
  * @param meetingAt :Date
- * @returns "2022.08.19 (화)"
+ * @returns "2022.08.19 (火)"
  */
 export const getDayToString = (meetingAt: Date): string => {
   if (!meetingAt) {

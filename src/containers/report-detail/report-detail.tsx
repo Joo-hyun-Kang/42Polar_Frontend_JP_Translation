@@ -140,20 +140,20 @@ const SimpleComponent = (props: {
             ) : null}
             <ReportContainer>
               <Title>
-                <Titleplus>42 SEOUL</Titleplus> 멘토링 보고서(멘토용)
+                <Titleplus>42 SEOUL</Titleplus> メンタリング 報告書(メンター用)
               </Title>
               <NoneValue1></NoneValue1>
-              <SubTitle1>구분</SubTitle1>
-              <MiniTitle1>공통과정</MiniTitle1>
-              <MiniTitle2>심화과정</MiniTitle2>
+              <SubTitle1>区分</SubTitle1>
+              <MiniTitle1>共通過程</MiniTitle1>
+              <MiniTitle2>深化過程</MiniTitle2>
               <NoneValue2></NoneValue2>
-              <SubTitle2>날짜</SubTitle2>
+              <SubTitle2>日付</SubTitle2>
               <DateBox>
                 {reportdata?.mentoringLogs
                   ? meetingAt[0].toLocaleDateString('ko-KR')
                   : ''}
               </DateBox>
-              <SubTitle8>시간</SubTitle8>
+              <SubTitle8>時刻</SubTitle8>
               <TimeBox>
                 {reportdata?.mentoringLogs
                   ? meetingAt[0].getHours().toString().padStart(2, '0') +
@@ -165,12 +165,12 @@ const SimpleComponent = (props: {
                     meetingAt[1].getMinutes().toString().padStart(2, '0')
                   : ''}
               </TimeBox>
-              <SubTitle3>장소</SubTitle3>
+              <SubTitle3>場所</SubTitle3>
               <PlaceBox>{reportdata?.place}</PlaceBox>
-              <SubTitle4>멘토이름</SubTitle4>
+              <SubTitle4>メンター</SubTitle4>
               <MentorNameBox>
                 {reportdata?.mentors.name}
-                <SignText>(인)</SignText>
+                <SignText>(印)</SignText>
                 <MentoSign>
                   <img
                     src={reportdata?.signatureUrl}
@@ -179,7 +179,7 @@ const SimpleComponent = (props: {
                   />
                 </MentoSign>
               </MentorNameBox>
-              <Cadet>멘티이름</Cadet>
+              <Cadet>メンティ</Cadet>
               <PlaceBox2>
                 <PlaceBoxStyled len={reportdata?.extraCadets.length}>
                   {reportdata?.cadets.name +
@@ -190,31 +190,31 @@ const SimpleComponent = (props: {
                     reportdata?.extraCadets}
                 </PlaceBoxStyled>
               </PlaceBox2>
-              <SubTitle5>멘토링개요</SubTitle5>
-              <ContentTitle1>주제</ContentTitle1>
+              <SubTitle5>メンタリング概要</SubTitle5>
+              <ContentTitle1>テーマ</ContentTitle1>
               <ContentBody1
                 len={reportdata?.topic.length}
                 readOnly
                 value={reportdata?.topic}
               ></ContentBody1>
-              <ContentTitle2>내용</ContentTitle2>
+              <ContentTitle2>内容</ContentTitle2>
               <ContentBody2
                 len={reportdata?.content.length}
                 readOnly
                 value={reportdata?.content}
               ></ContentBody2>
               <ContentTitle3>
-                교육생
+                生徒
                 <br />
-                에게
-                <br /> 남기는 말
+                に
+                <br /> 伝えたいこと
               </ContentTitle3>
               <ContentBody3
                 len={reportdata?.feedbackMessage.length}
                 readOnly
                 value={reportdata?.feedbackMessage}
               ></ContentBody3>
-              <SubTitle6>증빙사진</SubTitle6>
+              <SubTitle6>証明写真</SubTitle6>
               <ContentBody4>
                 {reportdata?.imageUrl[0] ? (
                   <img
@@ -245,23 +245,20 @@ const SimpleComponent = (props: {
                   ''
                 )}
               </ContentBody4>
-              <SubTitle7>
-                멘토링 <br /> 피드백
-              </SubTitle7>
+              <SubTitle7>メンタリングのフィードバック</SubTitle7>
               <ContentBody5>
-                멘토링에 대한 느낌을 점수로 적어주세요. (최고 5점, 최저 1점)
+                フィードバック (最高 5点, 最低 1点)
                 <br />
-                1. 교육생이 궁금한 것을 잘 정리해왔나요? (
+                1. 生徒が質問をよく整理して持ってきたか？ (
                 {reportdata?.feedback1})
                 <br />
-                2. 교육생과 함께 한 시간이 만족스러웠나요? (
+                2. 生徒との時間は満足のいくものだったか？ (
                 {reportdata?.feedback2})
                 <br />
-                3. 교육생이 전달한 내용을 잘 이해했나요? (
-                {reportdata?.feedback3})
+                3. 生徒が伝えた内容をよく理解したか？ ({reportdata?.feedback3})
                 <br />
               </ContentBody5>
-              <ContentBody6>(재)이노베이션 아카데미 귀하</ContentBody6>
+              <ContentBody6>(財)イノベーションアカデミー 御中</ContentBody6>
               {reportdata?.cadets.isCommon ? (
                 <IsCommonBox> o </IsCommonBox>
               ) : (
@@ -325,7 +322,7 @@ const ReportDetail = () => {
       datas.push(response.data);
       setreportDatas([...datas]);
     } catch (e) {
-      ErrorStore.on('유효하지 않는 데이터입니다.', ERROR_DEFAULT_VALUE.TITLE);
+      ErrorStore.on('無効なデータです。', ERROR_DEFAULT_VALUE.TITLE);
     }
   };
 
@@ -347,11 +344,11 @@ const ReportDetail = () => {
   }, []);
 
   if (!AuthStore.getAccessToken()) {
-    ErrorStore.on('로그인이 필요한 서비스입니다.', ERROR_DEFAULT_VALUE.TITLE);
+    ErrorStore.on('ログインが必要なサービスです。', ERROR_DEFAULT_VALUE.TITLE);
     AuthStore.Login();
     return <></>;
   } else if (AuthStore.getUserRole() !== USER_ROLES.BOCAL) {
-    ErrorStore.on('접근 권한이 없습니다.', ERROR_DEFAULT_VALUE.TITLE);
+    ErrorStore.on('アクセス権限がありません。', ERROR_DEFAULT_VALUE.TITLE);
     return <Navigate to="/" />;
   } else
     return (
@@ -363,7 +360,7 @@ const ReportDetail = () => {
                 to={`../mentorings/reports/${reportIds[0]}`}
                 state={{ modify: true }}
               >
-                <ModifyButton>보고서 수정</ModifyButton>
+                <ModifyButton>報告書の修正</ModifyButton>
               </Link>
             ) : null}
           </ButtonBody>
@@ -377,7 +374,7 @@ const ReportDetail = () => {
             content={() => componentRef.current}
             trigger={() => (
               <ButtonBody>
-                <PrintButton ref={buttonRef}>출력</PrintButton>
+                <PrintButton ref={buttonRef}>出力</PrintButton>
               </ButtonBody>
             )}
             onAfterPrint={() => {
