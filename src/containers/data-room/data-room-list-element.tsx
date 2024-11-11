@@ -21,7 +21,7 @@ export const CustomLink = styled(Link)`
 `;
 
 export function refineMeetingAt(rawDate: Date[]) {
-  const week = ['일', '월', '화', '수', '목', '금', '토'];
+  const week = ['日', '月', '火', '水', '木', '金', '土'];
   const dateString: string[] = [
     NewDateKr(rawDate[0]).toLocaleString('ko-KR'),
     NewDateKr(rawDate[1]).toLocaleString('ko-KR'),
@@ -56,10 +56,10 @@ export function refineMeetingAt(rawDate: Date[]) {
             Math.floor(
               (date[1].getTime() - date[0].getTime()) / (1000 * 60 * 60),
             ) +
-            '시간 ' +
+            '時間 ' +
             (((date[1].getTime() - date[0].getTime()) / (1000 * 60 * 60)) % 1) *
               60 +
-            '분' +
+            '分' +
             ')'}
         </ColoredDiv>
       </TableData>
@@ -99,7 +99,7 @@ function DataRoomListElement(
       <TableData>{data.mentors?.intraId ?? ''}</TableData>
       <TableData>{data.cadets?.intraId ?? ''}</TableData>
       <TableData>
-        {data.cadets ? (data.cadets?.isCommon ? '공통' : '심화') : ''}
+        {data.cadets ? (data.cadets?.isCommon ? '共通' : '深化') : ''}
       </TableData>
       {data.mentoringLogs?.meetingAt?.[0] ? (
         refineMeetingAt(data.mentoringLogs.meetingAt)
@@ -109,7 +109,7 @@ function DataRoomListElement(
       <TableData>{data.money?.toLocaleString('ko-KR') ?? ''}</TableData>
       <TableData>
         <CustomLink to={`/report-detail?reportId=${data.id}`}>
-          {data.id ? '상세보기' : ''}
+          {data.id ? '詳細表示' : ''}
         </CustomLink>
       </TableData>
       <TableData>{data.status ?? ''}</TableData>

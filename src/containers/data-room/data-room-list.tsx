@@ -76,13 +76,13 @@ function DataRoomList(
                 }
               ></CheckBox>
             </TableHead>
-            {isDesktop && <TableHead width="10%">신청 일시</TableHead>}
-            <TableHead width="8%">멘토 이름</TableHead>
-            <TableHead width="8%">아이디</TableHead>
-            <TableHead width="8%">카뎃 아이디</TableHead>
-            <TableHead width="4%">구분</TableHead>
+            {isDesktop && <TableHead width="10%">申請 日時</TableHead>}
+            <TableHead width="8%">メンター</TableHead>
+            <TableHead width="8%">Intra ID</TableHead>
+            <TableHead width="8%">カデット</TableHead>
+            <TableHead width="4%">区分</TableHead>
             <TableHead width="20%">
-              멘토링 시간{' '}
+              お出会する時刻{' '}
               {query.isAscending === true && (
                 <FontAwesomeIcon
                   icon={faSortUp}
@@ -100,10 +100,10 @@ function DataRoomList(
                 />
               )}
             </TableHead>
-            <TableHead width="8%">금액</TableHead>
-            <TableHead width="8%">보고서</TableHead>
-            <TableHead width="8%">보고서 상태</TableHead>
-            {isDesktop && <TableHead width="15%">최근 수정</TableHead>}
+            <TableHead width="8%">金額</TableHead>
+            <TableHead width="8%">報告書</TableHead>
+            <TableHead width="8%">報告書の修正</TableHead>
+            {isDesktop && <TableHead width="15%">最近の修正</TableHead>}
           </tr>
         </thead>
         <tbody>

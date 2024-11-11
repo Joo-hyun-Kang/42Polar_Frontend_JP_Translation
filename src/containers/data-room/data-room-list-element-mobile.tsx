@@ -33,7 +33,7 @@ function DataRoomListElementMobile(
       <TableData>{data.mentors?.intraId ?? ''}</TableData>
       <TableData>{data.cadets?.intraId ?? ''}</TableData>
       <TableData>
-        {data.cadets ? (data.cadets?.isCommon ? '공통' : '심화') : ''}
+        {data.cadets ? (data.cadets?.isCommon ? '共通' : '深化') : ''}
       </TableData>
       {data.mentoringLogs?.meetingAt[0] ? (
         refineMeetingAt(data.mentoringLogs.meetingAt)
@@ -43,7 +43,7 @@ function DataRoomListElementMobile(
       <TableData>{data.money?.toLocaleString('ko-KR') ?? ''}</TableData>
       <TableData>
         <CustomLink to={'/report-detail?reportId=' + data.id}>
-          {data.id ? '상세보기' : ''}
+          {data.id ? '詳細表示' : ''}
         </CustomLink>
       </TableData>
       <TableData>{data.status ?? ''}</TableData>
