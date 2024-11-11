@@ -76,11 +76,11 @@ const IconWrapper = styled.div`
 `;
 
 const timeInfoText =
-  '시작시간과 멘토링 진행 시간이 나타납니다.\n\n⚠️ 현재 방침에 따라, 멘토링 금액은 시간 단위로 (분은 버림 연산) 산정됩니다.';
+  '開始時間とメンタリングの進行時間が表示されます。\n\n⚠️ 現在の方針により、メンタリング料金は時間単位で（分は切り捨て計算）算定されます。';
 const statusInfoText =
-  'お待ち中: 멘토님께 온 카뎃의 멘토링 신청을 확인하고, 수락 및 거절할 수 있습니다.\n\n⚠️ 48시간 이내에 수락하지 않으면 자동취소가 이루어집니다.\n\n⚠️ 선택 가능한 시간이 존재하지 않으면 자동취소가 이루어집니다.\n\n확정: 멘토링이 확정된 상태이며, 부득이하게 멘토링을 진행하지 못할 시 취소하거나\n         멘토링이 끝난 뒤 완료할 수 있습니다\n\n완료: 멘토링 시작시간이 지난 후 주제를 클릭하고 변경 가능합니다.';
+  '待機中: メンターに届いたカデットのメンタリング申請を確認し、承諾または拒否することができます。\n\n⚠️ 48時間以内に承諾しない場合、自動的にキャンセルされます。\n\n⚠️ 選択可能な時間が存在しない場合も自動キャンセルされます。\n\n確定: メンタリングが確定した状態で、やむを得ずメンタリングを行えない場合はキャンセルするか、メンタリング終了後に完了することができます。\n\n完了: メンタリング開始時間が経過した後、トピックをクリックして変更できます。';
 const reportInfoText =
-  '작성불가: 멘토링 상태가 완료가 아닌 상태입니다. 완료는 멘토링 시작 시간 후 주제를 클릭해서 변경 가능합니다\n\n작성필요: 멘토링이 완료되어 보고서를 작성, 임시저장 및 제출할 수 있습니다.\n\n작성중: 임시저장된 보고서를 확인 및 수정하여 제출할 수 있습니다.\n\n작성완료: 보고서를 제출하게 되면, 더 이상 수정할 수 없는 작성완료 상태가 됩니다.';
+  '作成不可: メンタリングの状態が完了ではない場合です。完了はメンタリング開始時間後にトピックをクリックして変更できます。\n\n作成必要: メンタリングが完了したため、レポートの作成、下書き保存、および提出が可能です。\n\n作成中: 下書き保存されたレポートを確認・修正して提出できます。\n\n作成完了: レポートを提出すると、それ以上の修正はできない作成完了状態になります。';
 
 export function TableTitle() {
   const [modal, setModal] = useState<boolean>(false);
@@ -90,9 +90,9 @@ export function TableTitle() {
     <TableColumnLine>
       {modal && (
         <InfomationModal
-          TitleText={'🌟 42폴라 안내'}
+          TitleText={'🌟 42Polar 案内'}
           Text={text}
-          ButtonText={'닫기'}
+          ButtonText={'閉じる'}
           ButtonBg={defaultTheme.colors.polarSimpleMain}
           ButtonFunc={() => {
             setText('');
@@ -100,11 +100,11 @@ export function TableTitle() {
           }}
         />
       )}
-      <TableColumnDate>신청 일시</TableColumnDate>
-      <TableColumnUser>신청 카뎃</TableColumnUser>
-      <TableColumnTopic>주제</TableColumnTopic>
+      <TableColumnDate>申請 日時</TableColumnDate>
+      <TableColumnUser>申請 カデット</TableColumnUser>
+      <TableColumnTopic>テーマ</TableColumnTopic>
       <TableColumnTime>
-        멘토링 시간
+        お出合いする時刻
         <IconWrapper
           onClick={() => {
             setText(timeInfoText);
@@ -115,7 +115,7 @@ export function TableTitle() {
         </IconWrapper>
       </TableColumnTime>
       <TableColumnState>
-        상태
+        状態
         <IconWrapper
           onClick={() => {
             setText(statusInfoText);
@@ -126,7 +126,7 @@ export function TableTitle() {
         </IconWrapper>
       </TableColumnState>
       <TableColumnReport>
-        보고서
+        報告書
         <IconWrapper
           onClick={() => {
             setText(reportInfoText);

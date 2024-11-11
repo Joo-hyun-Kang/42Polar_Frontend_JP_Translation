@@ -35,7 +35,7 @@ const StatusBox = styled.div`
   color: ${defaultTheme.fontColor.whiteColor};
   display: flex;
   justify-content: center;
-  width: 50px;
+  width: 70px;
   padding: 0px 5px;
   margin-left: 20px;
   height: min-content;
@@ -111,9 +111,9 @@ export function ApplyDetailModal(props: ApplyDetailModalProps) {
     <Box>
       {modal && (
         <OneButtonModal
-          TitleText="✅ 42폴라 알림"
+          TitleText="✅ 42Polar お知らせ"
           Text={modalText}
-          ButtonText="닫기"
+          ButtonText="閉じる"
           ButtonBg={`${defaultTheme.colors.polarSimpleMain}`}
           ButtonFunc={() => {
             setModal(false);
@@ -130,7 +130,7 @@ export function ApplyDetailModal(props: ApplyDetailModalProps) {
         />
       </XButton>
       <ModalHeader>
-        <PageTitle>멘토링 신청 세부사항</PageTitle>
+        <PageTitle>メンタリング詳細</PageTitle>
         <StatusBox
           style={{
             backgroundColor:

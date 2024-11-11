@@ -67,7 +67,7 @@ export function ModalFooter(props: ModalFooterProps) {
       },
     )
       .then(() => {
-        props.setModalText('해당 멘토링이 取消되었습니다.');
+        props.setModalText('該当メンタリングがキャンセルされました。');
         props.setModal(true);
       })
       .catch(err => {
@@ -96,7 +96,7 @@ export function ModalFooter(props: ModalFooterProps) {
       },
     )
       .then(() => {
-        props.setModalText('해당 멘토링이 수락되었습니다.');
+        props.setModalText('該当メンタリングが承諾されました。');
         props.setModal(true);
       })
       .catch(err => {
@@ -120,7 +120,7 @@ export function ModalFooter(props: ModalFooterProps) {
       },
     )
       .then(() => {
-        props.setModalText('해당 멘토링이 完了되었습니다.');
+        props.setModalText('該当メンタリングが完了されました。');
         props.setModal(true);
       })
       .catch(err => {
@@ -138,7 +138,7 @@ export function ModalFooter(props: ModalFooterProps) {
             onClick={() => {
               if (props?.rejectReason?.length < 1) {
                 ErrorStore.on(
-                  '取消 사유를 입력해주세요',
+                  'キャンセル理由を入力してください。',
                   ERROR_DEFAULT_VALUE.TITLE,
                 );
                 return;
@@ -150,7 +150,7 @@ export function ModalFooter(props: ModalFooterProps) {
               );
             }}
           >
-            거절
+            拒否
           </Button>
           <Button
             style={{ backgroundColor: 'gray' }}
@@ -158,7 +158,7 @@ export function ModalFooter(props: ModalFooterProps) {
               props.setIsReject(false);
             }}
           >
-            取消
+            取り消す
           </Button>
         </ModalFooterContainer>
       )}
@@ -170,7 +170,7 @@ export function ModalFooter(props: ModalFooterProps) {
             onClick={() => {
               if (isNaN(props?.selectedTimeIndex)) {
                 ErrorStore.on(
-                  '멘토링 가능한 시간을 선택해주세요',
+                  'メンタリングが可能な時刻を選んでください。',
                   ERROR_DEFAULT_VALUE.TITLE,
                 );
                 return;
@@ -182,7 +182,7 @@ export function ModalFooter(props: ModalFooterProps) {
               );
             }}
           >
-            수락
+            承諾
           </Button>
           <Button
             style={{ backgroundColor: 'gray' }}
@@ -190,7 +190,7 @@ export function ModalFooter(props: ModalFooterProps) {
               props.setIsReject(true);
             }}
           >
-            거절
+            拒否
           </Button>
         </ModalFooterContainer>
       )}
@@ -211,7 +211,7 @@ export function ModalFooter(props: ModalFooterProps) {
               props.setIsReject(true);
             }}
           >
-            거절
+            拒否
           </Button>
         </ModalFooterContainer>
       )}

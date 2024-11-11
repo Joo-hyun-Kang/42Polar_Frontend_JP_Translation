@@ -72,14 +72,14 @@ export function ReportButton(props: ReportButtonProps) {
   }, []);
 
   /**
-   * 작성 불가
+   * 作成不可
    */
   if (status === REPORT_BUTTON_STATUS.WRITE_IMPOSSIBLE) {
     return <TableColumnReport>{status}</TableColumnReport>;
   }
 
   /**
-   * 작성 가능
+   * 作成可能
    */
   if (status === REPORT_BUTTON_STATUS.WRITE_NEED) {
     return (
@@ -97,7 +97,7 @@ export function ReportButton(props: ReportButtonProps) {
   }
 
   /**
-   * 작성 완료, 작성중
+   * 作成完了、作成中
    */
   return (
     <LinkContainer

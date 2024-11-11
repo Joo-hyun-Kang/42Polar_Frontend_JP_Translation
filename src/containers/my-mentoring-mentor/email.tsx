@@ -62,11 +62,10 @@ const DoubleButton = styled.div`
 `;
 
 /**
- * 긴 정보를 담고 있는 문자열을 원하는 크기로 자른 후 문자열 맨 마지막 위치에
- * ... 을 추가함
- * @param str 자를 문자열
- * @param maxLength 자를 위치
- * @returns 잘린 문자열
+ * 長い情報を含む文字列を指定した長さで切り取り、文字列の末尾に...を追加します。
+ * @param str 切り取る文字列
+ * @param maxLength 切り取る位置
+ * @returns 切り取られた文字列
  */
 export function sliceMoreInfoStr(str: string, maxLength: number) {
   if (!str) {
@@ -148,7 +147,7 @@ export function Email(props: EmailProps) {
       </Field>
       {time && (
         <Field>
-          <Title>인증코드</Title>
+          <Title>認証コード</Title>
           <TextInput
             onChange={e => {
               setEmailVerify(e.target.value);

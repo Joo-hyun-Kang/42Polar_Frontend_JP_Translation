@@ -125,11 +125,11 @@ const MyMentoringMentor = observer(() => {
   }, []);
 
   if (!AuthStore.getAccessToken()) {
-    ErrorStore.on('로그인이 필요한 서비스입니다.', ERROR_DEFAULT_VALUE.TITLE);
+    ErrorStore.on('ログインが必要なサービスです', ERROR_DEFAULT_VALUE.TITLE);
     AuthStore.Login();
     return <></>;
   } else if (AuthStore.getUserRole() !== USER_ROLES.MENTOR) {
-    ErrorStore.on('접근 권한이 없습니다.', ERROR_DEFAULT_VALUE.TITLE);
+    ErrorStore.on('アクセス権限がありません。', ERROR_DEFAULT_VALUE.TITLE);
     return <Navigate to="/" />;
   } else
     return (
@@ -142,7 +142,9 @@ const MyMentoringMentor = observer(() => {
           />
           <Container component="main" maxWidth="lg">
             <InfoContainer>
-              <InfoTitle>{MentorStore?.mentor?.intraId}의 멘토링</InfoTitle>
+              <InfoTitle>
+                {MentorStore?.mentor?.intraId}のメンタリング
+              </InfoTitle>
               <Email
                 email={MentorStore?.mentor?.email}
                 setEmail={MentorStore?.setEmail}

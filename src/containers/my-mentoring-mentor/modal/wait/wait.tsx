@@ -40,37 +40,37 @@ export function Wait(props: WaitProps) {
         props?.setSelectedTimeIndex,
       )}
       <ModalInfoElement
-        title={'멘토링 구분'}
+        title={'区分'}
         titleColor={'black'}
-        content={props?.cadet?.isCommon ? '공통과정' : '심화과정'}
+        content={props?.cadet?.isCommon ? '共通過程' : '深化過程'}
       />
       <ModalInfoElement
-        title={'카뎃 이름'}
+        title={'カデット'}
         titleColor={'black'}
         content={props?.cadet?.name}
       />
       <ModalInfoElement
-        title={'카뎃 Intra ID'}
+        title={'Intraid'}
         titleColor={'black'}
         content={props?.cadet?.intraId}
       />
       <ModalInfoElement
-        title={'카뎃 이력서'}
+        title={'紹介リンク'}
         titleColor={'black'}
         content={
           props?.cadet?.resumeUrl
             ? `${props?.cadet?.resumeUrl.slice(0, 25)}...`
-            : '링크 없음'
+            : 'linkなし'
         }
         link={props?.cadet?.resumeUrl ? props?.cadet?.resumeUrl : ''}
       />
       <ModalInfoElement
-        title={'멘토링 주제'}
+        title={'テーマ'}
         titleColor={'black'}
         content={props?.mentoringTopic}
       />
       <ModalInfoElement
-        title={props.isReject ? '거절 사유' : '질문 내용'}
+        title={props.isReject ? '拒否理由' : '質問事項'}
         titleColor={defaultTheme?.colors?.polarSimpleMain}
         content={''}
       />
