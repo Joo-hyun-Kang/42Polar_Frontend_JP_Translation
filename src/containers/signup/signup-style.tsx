@@ -81,7 +81,7 @@ export const InfoInput = styled.input`
   font-size: 19;
   ${theme.font.inter};
   ${theme.fontWeight.weightSmall};
-  ${theme.fontSize.sizeExtraSmall};
+  /* ${theme.fontSize.sizeExtraSmall}; */
 `;
 
 export const EmailInput = styled.input`

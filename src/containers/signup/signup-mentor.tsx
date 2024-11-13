@@ -285,7 +285,7 @@ const SignUpMentor = () => {
     if (!slackId) {
       setOneButtonModalProps({
         TitleText: 'Slack IDを記載してください',
-        Text: 'Slack IDDを記載してください',
+        Text: 'Slack IDを記載してください',
         XButtonFunc: () => {
           setIsError(false);
         },
@@ -652,7 +652,7 @@ const SignUpMentor = () => {
                 type="text"
                 onChange={onSlackChange}
                 maxLength={100}
-                placeholder="42Slackのニックネームと同じものを入力してください。"
+                placeholder="42Slackのニックネームと同じものを入力"
                 color="blue"
               ></InfoInput>
               <div
@@ -664,7 +664,7 @@ const SignUpMentor = () => {
                   fontSize: '1.5rem',
                 }}
               >
-                * カデットとの連絡に使用されます
+                * カデットとの連絡に使用
               </div>
             </div>
 
@@ -706,7 +706,7 @@ const SignUpMentor = () => {
                 type="text"
                 onChange={onDutyChange}
                 maxLength={100}
-                placeholder="現在の職級を記入してください。（ない場合は「なし」と記載してください)"
+                placeholder="ない場合は「なし」と記載してください"
                 color="blue"
               ></InfoInput>
               <div

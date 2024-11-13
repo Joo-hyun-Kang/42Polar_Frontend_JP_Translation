@@ -77,7 +77,7 @@ const Box = styled.div`
   justify-content: center;
   text-align: center;
   flex-direction: column;
-  width: 400px;
+  width: 450px;
   padding: 30px 0px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   background-color: ${defaultTheme.colors.polarGray};
@@ -132,14 +132,14 @@ export function UserJoin() {
   return (
     <Background>
       <Box>
-        안녕하세요 {userName}님 👋
+        こんにちは {userName}様 👋
         <br />
         <br />
-        필수 정보를 입력해야 원활한 서비스 이용이 가능합니다! 🙇‍♂️
+        必須情報を入力することで、円滑なサービスの利用が可能です！ 🙇‍♂️
         <br />
         <br />
         <ButtonWrapper to={url}>
-          <Button>입력 하러 가기 ✈️</Button>
+          <Button>入力しに行く ✈️</Button>
         </ButtonWrapper>
       </Box>
     </Background>
