@@ -408,7 +408,7 @@ function ApplyCalendar(props: ApplyCalendarModalProps) {
                 date.getFullYear() === today.getFullYear() &&
                 date.getDate() < today.getDate()))
           }
-          locale={'ko-KR'}
+          locale={'ja-JP'}
         />
       </CalendarDiv>
       <InputDiv>
