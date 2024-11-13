@@ -89,13 +89,13 @@ export function Header(props: ResumeProps) {
 
   return (
     <Container>
-      <MentorName>{AuthStore.getUserIntraId()}의 멘토링</MentorName>
+      <MentorName>{AuthStore.getUserIntraId()}のメンタリング</MentorName>
       <Resume>
-        <span>이력서</span>
+        <span>メンターに届くリンク</span>
         <TextInput
           className="resumeUrl"
           value={props.url}
-          placeholder="📝 이력서 URL을 넣어주세요"
+          placeholder="📝 URL（https://を含めてください）"
           disabled={!isEdit}
           onChange={e => {
             props.setUrl(e.target.value);

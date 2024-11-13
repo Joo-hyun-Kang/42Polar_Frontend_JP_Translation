@@ -26,14 +26,14 @@ export const Container = styled.div`
 export const constTime = (meetingAt: Date[]) => {
   return (
     <Container>
-      <Title>멘토링 시간</Title>
+      <Title>お会いする時刻</Title>
       <Content style={{ textDecoration: 'none' }}>
         {meetingAt?.length && !isNaN(meetingAt[0].getHours()) ? (
           <>
             {getDayToString(meetingAt[0])} {getTimeToString(meetingAt)}
           </>
         ) : (
-          '미정'
+          '未定'
         )}
       </Content>
     </Container>

@@ -66,10 +66,13 @@ const CadetMentornig = observer(() => {
 
   useEffect(() => {
     if (!AuthStore.getAccessToken()) {
-      ErrorStore.on('로그인이 필요한 서비스입니다.', ERROR_DEFAULT_VALUE.TITLE);
+      ErrorStore.on(
+        'ログインが必要なサービスです。',
+        ERROR_DEFAULT_VALUE.TITLE,
+      );
       return;
     } else if (AuthStore.getUserRole() !== USER_ROLES.CADET) {
-      ErrorStore.on('접근 권한이 없습니다.', ERROR_DEFAULT_VALUE.TITLE);
+      ErrorStore.on('アクセス権限がありません。', ERROR_DEFAULT_VALUE.TITLE);
       return;
     }
     tryGetCadetMentorings();
@@ -85,7 +88,9 @@ const CadetMentornig = observer(() => {
           })}
         </MentorCards>
       ) : (
-        <NoMentoringText>현재 진행중인 멘토링이 없습니다.</NoMentoringText>
+        <NoMentoringText>
+          現在進行中のメンタリングはありません。
+        </NoMentoringText>
       )}
     </NoneDrag>
   );

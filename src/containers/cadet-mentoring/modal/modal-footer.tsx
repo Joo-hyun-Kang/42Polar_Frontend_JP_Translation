@@ -68,7 +68,7 @@ export function ModalFooter(props: ModalFooterProps) {
       },
     )
       .then(() => {
-        props.setModalText('해당 멘토링이 取消되었습니다.');
+        props.setModalText('該当メンタリングが拒否されました。');
         props.setModal(true);
       })
       .catch(err => {
@@ -86,7 +86,7 @@ export function ModalFooter(props: ModalFooterProps) {
             onClick={() => {
               if (props?.rejectReason?.length < 1) {
                 ErrorStore.on(
-                  '取消 사유를 입력해주세요',
+                  '拒否理由を記載してください。',
                   ERROR_DEFAULT_VALUE.TITLE,
                 );
                 return;
@@ -106,7 +106,7 @@ export function ModalFooter(props: ModalFooterProps) {
               props.setIsReject(false);
             }}
           >
-            닫기
+            閉じる
           </Button>
         </ModalFooterContainer>
       )}

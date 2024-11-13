@@ -47,7 +47,7 @@ export const selectTime = (
 
   return (
     <Container>
-      <Title>멘토링 시간</Title>
+      <Title>お会いする時刻</Title>
       {times?.length !== 0 ? (
         <FormControl variant="standard" sx={{ minWidth: 200 }}>
           <Select value={selectedTimeIndex} onChange={handleChange}>
@@ -59,7 +59,7 @@ export const selectTime = (
           </Select>
         </FormControl>
       ) : (
-        <Content>시간 없음</Content>
+        <Content>なし</Content>
       )}
     </Container>
   );

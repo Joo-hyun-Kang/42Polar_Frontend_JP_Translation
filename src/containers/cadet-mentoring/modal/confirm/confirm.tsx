@@ -34,23 +34,23 @@ export function Confirm(props: ConfirmProps) {
     <Container>
       {constTime(props?.meetingAt)}
       <ModalInfoElement
-        title={'멘토 이름'}
+        title={'対象メンター'}
         titleColor={'black'}
         content={props?.mentor?.name}
       />
       <ModalInfoElement
-        title={'멘토 Intra ID'}
+        title={'Intra ID'}
         titleColor={'black'}
         content={props?.mentor?.intraId}
         link={`${process.env.REACT_APP_ORIGIN}/mentor-detail/${props?.mentor?.intraId}`}
       />
       <ModalInfoElement
-        title={'멘토링 주제'}
+        title={'テーマ'}
         titleColor={'black'}
         content={props?.mentoringTopic}
       />
       <ModalInfoElement
-        title={props.isReject ? '取消 사유' : '질문 내용'}
+        title={props.isReject ? '拒否理由' : '質問事項'}
         titleColor={defaultTheme.colors.polarSimpleMain}
         content={''}
       />
@@ -72,7 +72,7 @@ export function Confirm(props: ConfirmProps) {
       {props.feedbackMessage && (
         <>
           <ModalInfoElement
-            title={'피드백 메시지'}
+            title={'メンターからのフィードバック'}
             titleColor={defaultTheme.colors.polarSimpleMain}
             content={''}
           />
@@ -86,7 +86,7 @@ export function Confirm(props: ConfirmProps) {
       {props.rejectMessage && (
         <>
           <ModalInfoElement
-            title={'거절 사유'}
+            title={'拒否理由'}
             titleColor={defaultTheme.colors.polarSimpleMain}
             content={''}
           />

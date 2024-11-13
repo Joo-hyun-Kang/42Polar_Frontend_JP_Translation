@@ -38,7 +38,7 @@ const getDurationTime = (meetingAt: Date[]): string => {
     hour -= 1;
   }
 
-  return `${hour}시간 ${minute.toString().padStart(2, '0')}분`;
+  return `${hour}時間 ${minute.toString().padStart(2, '0')}分`;
 };
 
 const formatDate = (date: Date): string => {
@@ -74,7 +74,7 @@ export function Wait(props: WaitProps) {
         if (time && !isNaN(time[0].getDate())) {
           return (
             <ModalInfoElement
-              title={'신청 시간'}
+              title={'要請時刻'}
               titleColor={'black'}
               content={formatRequestTimes(time)}
             />
@@ -82,23 +82,23 @@ export function Wait(props: WaitProps) {
         }
       })}
       <ModalInfoElement
-        title={'멘토 이름'}
+        title={'メンター'}
         titleColor={'black'}
         content={props?.mentor?.name}
       />
       <ModalInfoElement
-        title={'멘토 Intra ID'}
+        title={'Intra ID'}
         titleColor={'black'}
         content={props?.mentor?.intraId}
         link={`${process.env.REACT_APP_ORIGIN}/mentor-detail/${props?.mentor?.intraId}`}
       />
       <ModalInfoElement
-        title={'멘토링 주제'}
+        title={'テーマ'}
         titleColor={'black'}
         content={props?.mentoringTopic}
       />
       <ModalInfoElement
-        title={props.isReject ? '거절 사유' : '질문 내용'}
+        title={props.isReject ? '拒否理由' : '質問事項'}
         titleColor={defaultTheme?.colors?.polarSimpleMain}
         content={''}
       />

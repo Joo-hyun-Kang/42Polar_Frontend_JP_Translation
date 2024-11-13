@@ -103,9 +103,9 @@ export function ApplyDetailModal(props: ApplyDetailModalProps) {
     <Box>
       {modal && (
         <OneButtonModal
-          TitleText="✅ 42폴라 알림"
+          TitleText="✅ 42Polar お知らせ"
           Text={modalText}
-          ButtonText="닫기"
+          ButtonText="閉じる"
           ButtonBg={`${defaultTheme.colors.polarSimpleMain}`}
           ButtonFunc={() => {
             setModal(false);
@@ -122,7 +122,7 @@ export function ApplyDetailModal(props: ApplyDetailModalProps) {
         />
       </XButton>
       <ModalHeader>
-        <PageTitle>멘토링 신청 세부사항</PageTitle>
+        <PageTitle>メンタリング詳細</PageTitle>
         <StatusBox
           style={{
             backgroundColor:

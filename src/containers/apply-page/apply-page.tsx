@@ -549,7 +549,7 @@ const ApplyPage = () => {
           if (res.status === 201) {
             setSuccessModal(true);
           } else {
-            setErrorModalMsg('요청 에러 발생');
+            setErrorModalMsg('リクエストエラーが発生しました');
             setErrorModal(true);
           }
         });
@@ -559,7 +559,7 @@ const ApplyPage = () => {
           `${(err.response?.data as RequestErrorResponse).message}`,
         );
       } else {
-        setErrorModalMsg('요청 에러 발생');
+        setErrorModalMsg('リクエストエラーが発生しました');
       }
       setErrorModal(true);
     } finally {
@@ -597,7 +597,10 @@ const ApplyPage = () => {
           ERROR_DEFAULT_VALUE.TITLE,
         );
       } else {
-        ErrorStore.on('요청 에러 발생', ERROR_DEFAULT_VALUE.TITLE);
+        ErrorStore.on(
+          'リクエストエラーが発生しました',
+          ERROR_DEFAULT_VALUE.TITLE,
+        );
       }
       navigate('/');
     }
@@ -700,11 +703,11 @@ const ApplyPage = () => {
 
   const ClickEvent = () => {
     if (!(firstStartTime && firstEndTime)) {
-      setErrorModalMsg('첫번째 신청 시간은 필수로 입력되어야 합니다.');
+      setErrorModalMsg('最初の申請時間は必ず入力する必要があります。');
     } else if (topic.length <= 0) {
-      setErrorModalMsg('주제를 입력해주세요');
+      setErrorModalMsg('テーマを入力してください');
     } else if (content.length <= 0) {
-      setErrorModalMsg('궁금한 점을 입력해주세요');
+      setErrorModalMsg('質問や疑問点を入力してください');
     } else {
       postApply();
       return;
@@ -715,30 +718,30 @@ const ApplyPage = () => {
   if (isLoading) {
     return <></>;
   } else if (mentorId === undefined) {
-    ErrorStore.on('잘못된 접근입니다.', ERROR_DEFAULT_VALUE.TITLE);
+    ErrorStore.on('不正なアクセスです。', ERROR_DEFAULT_VALUE.TITLE);
     return <Navigate to="/" />;
   } else if (isExist === false) {
-    ErrorStore.on('존재하지 않는 멘토입니다.', ERROR_DEFAULT_VALUE.TITLE);
+    ErrorStore.on('存在しないメンターです', ERROR_DEFAULT_VALUE.TITLE);
     return <Navigate to="/" />;
   } else if (active === false) {
     ErrorStore.on(
-      '멘토링이 가능하지 않은 멘토입니다.',
+      'メンタリングが利用できないメンターです',
       ERROR_DEFAULT_VALUE.TITLE,
     );
     return <Navigate to="/" />;
   } else if (!token) {
-    ErrorStore.on('로그인이 필요한 서비스입니다.', ERROR_DEFAULT_VALUE.TITLE);
+    ErrorStore.on('ログインが必要なサービスです', ERROR_DEFAULT_VALUE.TITLE);
     AuthStore.Login();
     return <></>;
   } else if (role !== USER_ROLES.CADET) {
-    ErrorStore.on('접근 권한이 없습니다.', ERROR_DEFAULT_VALUE.TITLE);
+    ErrorStore.on('アクセス権限がありません。', ERROR_DEFAULT_VALUE.TITLE);
     return <Navigate to="/" />;
   } else
     return (
       <div>
         {errorModal && (
           <OneButtonModal
-            TitleText="⚠️ 42폴라 경고"
+            TitleText="⚠️ 42Polar 警告"
             Text={errorModalMsg}
             XButtonFunc={() => {
               setErrorModal(false);
@@ -752,13 +755,13 @@ const ApplyPage = () => {
         )}
         {successModal && (
           <OneButtonModal
-            TitleText="요청 완료"
-            Text="요청이 성공적으로 완료되었습니다"
+            TitleText="リクエスト かんりょ"
+            Text="リクエストが正常に完了しました"
             XButtonFunc={() => {
               setSuccessModal(false);
               navigate('/cadets/mentorings');
             }}
-            ButtonText="확인"
+            ButtonText="確認"
             ButtonFunc={() => {
               setSuccessModal(false);
               navigate('/cadets/mentorings');
@@ -781,24 +784,25 @@ const ApplyPage = () => {
                 <NoticeHeight>
                   <br />
                 </NoticeHeight>
-                *신청 시간은 <MainBlueBody>실제 멘토링</MainBlueBody>을 진행하는
-                시간입니다.
-                <br /> *신청 시간에는 멘토님의{' '}
-                <MainBlueBody>멘토링 가능시간</MainBlueBody>만 표시됩니다.
-                <br /> *예산과 연관된 시간이니 신청 당{' '}
-                <MainBlueBody>최대 3시간으로</MainBlueBody> 제한하고 있습니다.
-                <br /> *<MainBlueBody>추가 시간</MainBlueBody>을 원하시면{' '}
-                <MainBlueBody>추가 신청</MainBlueBody> 부탁드립니다.
+                * 申請時間は<MainBlueBody>実際のメンタリング</MainBlueBody>
+                を行う時間です。
+                <br /> *申請時間にはメンターの
+                <MainBlueBody>メンタリング可能時間</MainBlueBody>
+                のみ表示されます。
+                <br /> *予算に関係する時間ですので、申請ごとに
+                <MainBlueBody>最大3時間まで</MainBlueBody>制限されています。
+                <br /> *<MainBlueBody>追加時間</MainBlueBody>が必要な場合は
+                <MainBlueBody>追加申請</MainBlueBody>をお願いいたします。
                 <br /> <br />
               </Notice>
               <Chooseplan>
                 <MainTextNoLine>
-                  <MainText>일정 선택하기</MainText>{' '}
+                  <MainText>日程を選択する</MainText>{' '}
                   <IconPadding>
                     <FontAwesomeIcon icon={faClock} size="2x" color="black" />{' '}
                   </IconPadding>
                 </MainTextNoLine>
-                <MiddleText>*최소 1개의 신청 시간을 선택해 주세요</MiddleText>
+                <MiddleText>*最低1つの申請時間を選択してください</MiddleText>
                 <Wrapper>
                   <ApplyButtonDiv>
                     <PlanButton1
@@ -828,7 +832,7 @@ const ApplyPage = () => {
                           </HourDiv>
                         </ButtonDiv>
                       ) : (
-                        '신청 시간1'
+                        '候補時刻1'
                       )}
                     </PlanButton1>
                     {firstStartTime && firstEndTime ? (
@@ -881,7 +885,7 @@ const ApplyPage = () => {
                           </HourDiv>
                         </ButtonDiv>
                       ) : (
-                        '신청 시간2'
+                        '候補時刻2'
                       )}
                     </PlanButton2>
                     {secondStartTime && secondEndTime ? (
@@ -932,7 +936,7 @@ const ApplyPage = () => {
                           </HourDiv>
                         </ButtonDiv>
                       ) : (
-                        '신청 시간3'
+                        '候補時刻3'
                       )}
                     </PlanButton2>
                     {thirdStartTime && thirdEndTime ? (
@@ -963,14 +967,14 @@ const ApplyPage = () => {
               </Line>
               <Content>
                 <MainTextNoLine>
-                  <MainText2>신청 정보</MainText2>{' '}
+                  <MainText2>申請詳細</MainText2>{' '}
                   <FontAwesomeIcon
                     icon={faHighlighter}
                     size="sm"
                     color="black"
                   />{' '}
                 </MainTextNoLine>
-                <MiddleText2> · 주제 </MiddleText2>
+                <MiddleText2> · テーマ </MiddleText2>
                 <InputCounter
                   setter={setTopic}
                   value={topic}
@@ -979,7 +983,7 @@ const ApplyPage = () => {
                   disabled={false}
                   height="2.6rem"
                 />
-                <MiddleText3> · 궁금한 점 </MiddleText3>
+                <MiddleText3> · 質問事項 </MiddleText3>
                 <InputCounter
                   setter={setContent}
                   value={content}
@@ -988,7 +992,7 @@ const ApplyPage = () => {
                   disabled={false}
                   height="12rem"
                 />
-                <ApplyButton onClick={ClickEvent}>제출</ApplyButton>
+                <ApplyButton onClick={ClickEvent}>提出</ApplyButton>
               </Content>
             </ApplyContainer>
           </div>
@@ -1008,14 +1012,15 @@ const ApplyPage = () => {
                 <NoticeHeight>
                   <br />
                 </NoticeHeight>
-                *신청 시간은 <MainBlueBody>실제 멘토링</MainBlueBody>을 진행하는
-                시간입니다.
-                <br /> *신청 시간에는 멘토님의{' '}
-                <MainBlueBody>멘토링 가능시간</MainBlueBody>만 표시됩니다.
-                <br /> *예산과 연관된 시간이니 신청 당{' '}
-                <MainBlueBody>최대 3시간으로</MainBlueBody> 제한하고 있습니다.
-                <br /> *<MainBlueBody>추가 시간</MainBlueBody>을 원하시면{' '}
-                <MainBlueBody>추가 신청</MainBlueBody> 부탁드립니다.
+                * 申請時間は<MainBlueBody>実際のメンタリング</MainBlueBody>
+                を行う時間です。
+                <br /> *申請時間にはメンターの
+                <MainBlueBody>メンタリング可能時間</MainBlueBody>
+                のみ表示されます。
+                <br /> *予算に関係する時間ですので、申請ごとに
+                <MainBlueBody>最大3時間まで</MainBlueBody>制限されています。
+                <br /> *<MainBlueBody>追加時間</MainBlueBody>が必要な場合は
+                <MainBlueBody>追加申請</MainBlueBody>をお願いいたします。
                 <br /> <br />
               </Notice>
               <MovChooseplan>
@@ -1025,9 +1030,9 @@ const ApplyPage = () => {
                     size="1x"
                     color="black"
                   />{' '}
-                  일정 선택하기
+                  日程を選択する
                 </MainText>
-                <MiddleText>*최소 1개의 신청 시간을 선택해 주세요</MiddleText>
+                <MiddleText>*最低1つの申請時間を選択してください</MiddleText>
                 <Wrapper>
                   <ApplyButtonDiv>
                     <MovPlanButton1
@@ -1057,7 +1062,7 @@ const ApplyPage = () => {
                           </HourDiv>
                         </ButtonDiv>
                       ) : (
-                        '신청 시간1'
+                        '候補時刻1'
                       )}
                     </MovPlanButton1>
                     {firstStartTime && firstEndTime ? (
@@ -1110,7 +1115,7 @@ const ApplyPage = () => {
                           </HourDiv>
                         </ButtonDiv>
                       ) : (
-                        '신청 시간2'
+                        '候補時刻2'
                       )}
                     </MovPlanButton2>
                     {secondStartTime && secondEndTime ? (
@@ -1161,7 +1166,7 @@ const ApplyPage = () => {
                           </HourDiv>
                         </ButtonDiv>
                       ) : (
-                        '신청 시간3'
+                        '候補時刻3'
                       )}
                     </MovPlanButton2>
                     {thirdStartTime && thirdEndTime ? (
@@ -1193,9 +1198,9 @@ const ApplyPage = () => {
                     size="1x"
                     color="black"
                   />{' '}
-                  신청 정보
+                  申請詳細
                 </MainText2>
-                <MovMiddleText2> · 주제 </MovMiddleText2>
+                <MovMiddleText2> · テーマ </MovMiddleText2>
                 <InputCounter
                   setter={setTopic}
                   value={topic}
@@ -1204,7 +1209,7 @@ const ApplyPage = () => {
                   disabled={false}
                   height="4rem"
                 />
-                <MovMiddleText3> · 궁금한 점 </MovMiddleText3>
+                <MovMiddleText3> · 質問事項 </MovMiddleText3>
                 <InputCounter
                   setter={setContent}
                   value={content}
@@ -1213,7 +1218,7 @@ const ApplyPage = () => {
                   disabled={false}
                   height="20rem"
                 />
-                <ApplyButton onClick={ClickEvent}>제출</ApplyButton>
+                <ApplyButton onClick={ClickEvent}>提出</ApplyButton>
               </MovContent>
             </MovApplyContainer>
           </div>
