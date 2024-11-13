@@ -83,9 +83,9 @@ const XButton = styled.div`
 
 function getPageTitle(modalType: ModalType): string {
   if (modalType === ModalType.AVAILABLE_TIME) {
-    return '가능시간 수정';
+    return '可能時間の修正';
   } else {
-    return '멘토 정보 수정';
+    return 'メンターの情報修正';
   }
 }
 

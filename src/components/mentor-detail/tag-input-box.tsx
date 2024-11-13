@@ -14,7 +14,7 @@ function TagInputBoxComponent(props: TagInputBoxProps) {
 
     if (newTag.length > 0 && !props.value.includes(newTag)) {
       if (JSON.stringify(props.value).length + newTag.length > 140) {
-        alert('더이상 tag를 추가할 수 없습니다.');
+        alert('この以上タグを追加できません。');
       } else {
         props.setter(oldTags => [...oldTags, newTag]);
       }
@@ -26,7 +26,7 @@ function TagInputBoxComponent(props: TagInputBoxProps) {
     <TagInputBox>
       <FormBox onSubmit={handleSubmit}>
         <FormBoxInput type="text" />
-        <FomrBoxSubmit type="submit">추가</FomrBoxSubmit>
+        <FomrBoxSubmit type="submit">追加</FomrBoxSubmit>
       </FormBox>
     </TagInputBox>
   );

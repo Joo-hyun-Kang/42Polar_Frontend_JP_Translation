@@ -107,14 +107,14 @@ export function Time(props: TimeProps) {
   return (
     <Container>
       <ToggleContainer>
-        <NameTitle>멘토링 가능/불가</NameTitle>
+        <NameTitle>メンタリング可能/不可</NameTitle>
         <Switch
           checked={props.checked}
           onChange={handleChange}
           inputProps={{ 'aria-label': 'controlled' }}
           sx={{ mb: 1, mr: -6 }}
         />
-        <BodySmallFont style={{ paddingBottom: '6px' }}>가능</BodySmallFont>
+        <BodySmallFont style={{ paddingBottom: '6px' }}>可能</BodySmallFont>
       </ToggleContainer>
       <TimeTableContainer
         style={{
@@ -131,7 +131,7 @@ export function Time(props: TimeProps) {
               marginBottom: '0px',
             }}
           >
-            요일
+            曜日
           </BodyBigFont>
         </ColumnDays>
         <ColumnName>
@@ -141,7 +141,7 @@ export function Time(props: TimeProps) {
               marginBottom: '0px',
             }}
           >
-            가능시간
+            可能時間
           </BodyBigFont>
         </ColumnName>
         <ColumnLine></ColumnLine>

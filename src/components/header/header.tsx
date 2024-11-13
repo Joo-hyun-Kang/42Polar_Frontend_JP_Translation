@@ -350,7 +350,7 @@ const Header = () => {
                 >
                   <SuggestionButton>お問合せ</SuggestionButton>
                   <Link to={'/cadets/mentorings'}>
-                    <MyMentoringButton>마이페이지</MyMentoringButton>
+                    <MyMentoringButton>マイページ</MyMentoringButton>
                   </Link>
                 </a>
               </div>

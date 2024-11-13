@@ -166,8 +166,9 @@ function SelectKeywords(props: Props) {
       {props.isActivateIntroductionEdit && (
         <ButtonContainer>
           <Button
-            text="수정완료"
+            text="修正完了"
             borderRadius="20px"
+            width="8rem"
             onClick={() => {
               props.setIsActivateDeleteModal(true);
             }}
@@ -176,8 +177,8 @@ function SelectKeywords(props: Props) {
       )}
       {props.isActivateDeleteModal && (
         <TwoButtonModal
-          Text="수정하시겠습니까?"
-          TitleText="수정"
+          Text="修正しますか？"
+          TitleText="修正"
           XButtonFunc={() => {
             props.setIsActivateDeleteModal(false);
           }}
@@ -197,8 +198,8 @@ function SelectKeywords(props: Props) {
             props.handleSubmitIntroductionTagsNo();
             handleSubmitNo();
           }}
-          Button1Text="네"
-          Button2Text="아니요"
+          Button1Text="はい"
+          Button2Text="いいえ"
           Button2bg={theme.colors.grayThree}
         />
       )}

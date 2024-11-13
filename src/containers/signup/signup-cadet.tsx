@@ -67,12 +67,12 @@ const SignUpCadet = () => {
   async function joinCadetServer() {
     if (!name) {
       setOneButtonModalProps({
-        TitleText: '실명을 입력하세요',
-        Text: '실명을 입력하세요',
+        TitleText: '実名を入力してください',
+        Text: '実名を入力してください',
         XButtonFunc: () => {
           setIsError(false);
         },
-        ButtonText: '확인',
+        ButtonText: '確認',
         ButtonFunc: () => {
           setIsError(false);
         },
@@ -102,12 +102,12 @@ const SignUpCadet = () => {
 
       if (response.status === 200) {
         setOneButtonModalProps({
-          TitleText: '제출에 성공하셨습니다',
-          Text: '제출에 성공하셨습니다',
+          TitleText: '提出に成功しました',
+          Text: '提出に成功しました',
           XButtonFunc: () => {
             setIsError(false);
           },
-          ButtonText: '확인',
+          ButtonText: '確認',
           ButtonFunc: () => {
             setIsError(false);
           },
@@ -120,12 +120,12 @@ const SignUpCadet = () => {
         setIsRedirection(true);
       } else {
         setOneButtonModalProps({
-          TitleText: '제출에 실패하셨습니다',
-          Text: '제출에 실패하셨습니다',
+          TitleText: '提出に失敗しました',
+          Text: '提出に失敗しました',
           XButtonFunc: () => {
             setIsError(false);
           },
-          ButtonText: '확인',
+          ButtonText: '確認',
           ButtonFunc: () => {
             setIsError(false);
           },
@@ -135,12 +135,12 @@ const SignUpCadet = () => {
       }
     } catch (err) {
       setOneButtonModalProps({
-        TitleText: '제출에 실패하셨습니다',
-        Text: '제출에 실패하셨습니다',
+        TitleText: '提出に失敗しました',
+        Text: '提出に失敗しました',
         XButtonFunc: () => {
           setIsError(false);
         },
-        ButtonText: '확인',
+        ButtonText: '確認',
         ButtonFunc: () => {
           setIsError(false);
         },
@@ -157,14 +157,14 @@ const SignUpCadet = () => {
       {!isMobile && (
         <ContainersPc>
           <RequiredWrapper>
-            <HeadLetters>필수 정보 입력</HeadLetters>
+            <HeadLetters>必須情報の入力</HeadLetters>
             <SingupImage src={singupImage} alt="singup-image" />
             <div style={{ paddingBottom: '5px' }}>
-              <NameTitle>본인 실명</NameTitle>
+              <NameTitle>本人の実名</NameTitle>
               <InfoInput
                 type="text"
                 onChange={onNameChange}
-                placeholder="보고서 작성 등에 사용됩니다."
+                placeholder="報告書作成などに使用されます。"
                 maxLength={10}
               ></InfoInput>
             </div>
@@ -176,7 +176,7 @@ const SignUpCadet = () => {
             }}
             onClick={() => joinCadetServer()}
           >
-            제출
+            提出
             {isRedirection && <Navigate to="/" />}
           </Button>
           {isError && <OneButtonModal {...oneButtonModalProps} />}
@@ -189,15 +189,15 @@ const SignUpCadet = () => {
           }}
         >
           <RequiredWrapper>
-            <HeadLetters>필수 정보 입력</HeadLetters>
+            <HeadLetters>必須情報の入力</HeadLetters>
             <SingupImage src={singupImage} alt="singup-image" />
 
             <div style={{ paddingBottom: '5px' }}>
-              <NameTitle>본인 실명</NameTitle>
+              <NameTitle>本人の実名</NameTitle>
               <InfoInput
                 type="text"
                 onChange={onNameChange}
-                placeholder="보고서 작성 등에 사용됩니다."
+                placeholder="報告書作成などに使用されます。"
                 maxLength={10}
               ></InfoInput>
             </div>
@@ -209,7 +209,7 @@ const SignUpCadet = () => {
             }}
             onClick={() => joinCadetServer()}
           >
-            제출
+            提出
             {isRedirection && <Navigate to="/" />}
           </Button>
           {isError && <OneButtonModal {...oneButtonModalProps} />}

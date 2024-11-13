@@ -130,7 +130,7 @@ function MentorDetail() {
         setMentorIntroduction(
           result.data?.introduction
             ? result.data.introduction
-            : '소개글이 없습니다.',
+            : '紹介文がありません。',
         );
         setMentorMarkdown(
           result.data?.markdownContent
@@ -192,7 +192,7 @@ function MentorDetail() {
           setMentorIntroduction(
             result.data?.introduction
               ? result.data.introduction
-              : '소개글이 없습니다.',
+              : '"紹介文がありません"',
           );
         });
       })
@@ -313,7 +313,7 @@ function MentorDetail() {
               />
               <MentorInfoContent>
                 <MentorName>
-                  <div className="mentor-name">{mentor?.name} 멘토</div>
+                  <div className="mentor-name">{mentor?.name}</div>
                   <div className="mentor-intra">{mentor?.slackId}</div>
                   {user?.intraId === mentor?.intraId && user && mentor ? (
                     <FontAwesomeIcon
@@ -332,7 +332,7 @@ function MentorDetail() {
                   <Button
                     fontFrame={theme.fontFrame.subTitleSmall}
                     borderWidth="1px"
-                    text={`멘토링 ${mentor?.isActive ? '가능' : '불가능'}`}
+                    text={`メンタリング ${mentor?.isActive ? '可' : '不可'}`}
                     backgroundColor={theme.colors.polarBackground}
                     color={theme.colors.polarSimpleMain}
                     width="12rem"
@@ -355,7 +355,7 @@ function MentorDetail() {
             {mentor?.isActive ? (
               <Link to={`/apply-page/${mentor?.intraId}`}>
                 <Button
-                  text="멘토링 신청하기"
+                  text="メンタリング申し込む"
                   width="21rem"
                   height="6rem"
                   backgroundColor={theme.colors.polarSimpleMain}
@@ -364,7 +364,7 @@ function MentorDetail() {
               </Link>
             ) : (
               <Button
-                text="멘토링 신청하기"
+                text="メンタリング申し込む"
                 width="21rem"
                 height="6rem"
                 color={theme.colors.backgoundWhite}
@@ -378,53 +378,61 @@ function MentorDetail() {
               <OneButtonModal
                 Text={
                   user?.role !== 'cadet'
-                    ? '멘티만 신청 가능합니다.'
-                    : '멘토님이 준비 중입니다.'
+                    ? 'メンティのみ申し込みが可能です。'
+                    : 'メンターが準備中です。'
                 }
-                TitleText="멘토링 신청"
+                TitleText="メンタリング申し込む"
                 XButtonFunc={() => {
                   setIsActivateApplyModal(false);
                 }}
                 ButtonFunc={() => {
                   setIsActivateApplyModal(false);
                 }}
-                ButtonText="확인"
+                ButtonText="確認"
               />
             )}
           </MentorHeader>
           <MentorBody>
             <MentorBody1>
               <MentorBody1Left>
-                <MenuBox>멘토링 이용 방법</MenuBox>
+                <MenuBox>メンタリング利用方法</MenuBox>
                 <MentorHowToContent>
                   <HowToContent>
-                    <div>카뎃</div>
+                    <div>カデット</div>
                     <ol type="1">
-                      <li>멘토의 멘토링 상태 확인하고 멘토링 신청 버튼 클릭</li>
-                      <li>만남 일정과 정보를 작성하고 제출</li>
-                      <li>마이페이지에서 만남 상태 확인 가능</li>
-                      <li>멘토링이 확정, 취소되면 카뎃에게 알림 메일 발송</li>
-                      <li>장소협의 후 만남 일정 시간에 멘토링 진행</li>
+                      <li>
+                        メンターのメンタリング状態を確認し、メンタリング申請ボタンをクリック
+                      </li>
+                      <li>面会日程と情報を記入して提出</li>
+                      <li>マイページで面会の状態を確認可能</li>
+                      <li>
+                        メンタリングが確定またはキャンセルされた場合、カデットに通知メールが送信されます
+                      </li>
+                      <li>場所を協議し、面会予定時間にメンタリングを実施</li>
                     </ol>
                   </HowToContent>
                   <HowToContent>
-                    <div>멘토</div>
+                    <div>メンター</div>
                     <ol>
-                      <li>카뎃의 멘토링 신청 시 알림 메일 발송</li>
-                      <li>마이페이지에서 만남 상태 결정 가능</li>
-                      <li>멘토링이 확정, 취소되면 카뎃에게 알림 메일 발송</li>
-                      <li>장소협의 후 만남 일정 시간에 멘토링 진행</li>
-                      <li>멘토링 진행 후 보고서 작성 가능</li>
+                      <li>
+                        カデットのメンタリング申請時に通知メールが送信されます
+                      </li>
+                      <li>マイページで面会の状態を決定可能</li>
+                      <li>
+                        メンタリングが確定またはキャンセルされた場合、カデットに通知メールが送信されます
+                      </li>
+                      <li>場所を協議し、面会予定時間にメンタリングを実施</li>
+                      <li>メンタリング終了後にレポート作成が可能</li>
                     </ol>
                   </HowToContent>
                   <footer>
                     <div>
-                      <FontAwesomeIcon icon={faUserAstronaut} /> 48시간 이내에
-                      만남 상태 확정 또는 취소 되지 않으면 자동취소
+                      <FontAwesomeIcon icon={faUserAstronaut} />{' '}
+                      48時間以内に面会の状態を確定またはキャンセルしない場合、自動的にキャンセルされます
                     </div>
                     <div>
-                      <FontAwesomeIcon icon={faUserAstronaut} /> 신청 시간
-                      10분전에 멘토가 응답하지 않으면 자동취소
+                      <FontAwesomeIcon icon={faUserAstronaut} />{' '}
+                      申請時間の10分前にメンターが応答しない場合、自動的にキャンセルされます
                     </div>
                   </footer>
                 </MentorHowToContent>
@@ -432,7 +440,7 @@ function MentorDetail() {
               <MentorBody1Right>
                 <MentorBody1Right1>
                   <MenuBox>
-                    멘토 소개
+                    メンター紹介
                     {user?.intraId === mentor?.intraId && user && mentor ? (
                       <FontAwesomeIcon
                         icon={faPencil}
@@ -490,9 +498,9 @@ function MentorDetail() {
                 </MentorBody1Right1>
                 <MentorBody1Right2>
                   <MenuBox1>
-                    <div>주제</div>
-                    <div>상태</div>
-                    <div>일시</div>
+                    <div>テーマ</div>
+                    <div>状態</div>
+                    <div>日付</div>
                   </MenuBox1>
                   <PageNationComponent />
                 </MentorBody1Right2>
@@ -501,7 +509,7 @@ function MentorDetail() {
             <MentorBody2>
               <MenuBox3>
                 <div>
-                  가능 시간
+                  可能 時刻
                   {user?.intraId === mentor?.intraId && user && mentor ? (
                     <FontAwesomeIcon
                       icon={faPencil}
@@ -555,7 +563,7 @@ function MentorDetail() {
               ></MentorBody3Toggle>
 
               <MenuBox>
-                멘토 정보
+                メンター情報
                 {user?.intraId === mentor?.intraId && user && mentor ? (
                   <FontAwesomeIcon
                     icon={faPencil}
@@ -584,7 +592,7 @@ function MentorDetail() {
                   />
                   <SubmitButton>
                     <Button
-                      text="편집완료"
+                      text="編集完了"
                       width="12rem"
                       height="3.5rem"
                       backgroundColor={theme.colors.polarSimpleMain}
@@ -595,8 +603,8 @@ function MentorDetail() {
                     />
                     {isActivateMentorMarkDownEditModal && (
                       <TwoButtonModal
-                        Text="수정하시겠습니까?"
-                        TitleText="수정"
+                        Text="修正しますか？"
+                        TitleText="修正"
                         XButtonFunc={() => {
                           setIsActivateMentorMarkDownEditModal(false);
                         }}
@@ -614,8 +622,8 @@ function MentorDetail() {
                           setIsActivateMentorMarkdownEdit(false);
                           handleSubmitMentorMarkdownNo();
                         }}
-                        Button1Text="네"
-                        Button2Text="아니요"
+                        Button1Text="はい"
+                        Button2Text="いいえ"
                         Button2bg={theme.colors.grayThree}
                       />
                     )}
@@ -628,7 +636,7 @@ function MentorDetail() {
               )}
             </MentorBody3>
             <MentorCommets>
-              <MenuBox>댓글</MenuBox>
+              <MenuBox>コメント</MenuBox>
               {user?.intraId ? (
                 <ReplyContainer>
                   <Comment>
@@ -643,7 +651,7 @@ function MentorDetail() {
                     />
                     <SubmitButton>
                       <Button
-                        text="제출하기"
+                        text="提出"
                         width="9rem"
                         height="100%"
                         backgroundColor={
@@ -661,15 +669,15 @@ function MentorDetail() {
                       />
                       {isActivateCommentSubmit && (
                         <OneButtonModal
-                          TitleText="댓글 작성"
-                          Text="댓글은 cadet만 작성할 수 있습니다."
+                          TitleText="コメントの作成"
+                          Text="コメントはカデットのみ作成できます。"
                           XButtonFunc={() => {
                             setIsActivateCommentSubmit(false);
                           }}
                           ButtonFunc={() => {
                             setIsActivateCommentSubmit(false);
                           }}
-                          ButtonText="확인"
+                          ButtonText="確認"
                         />
                       )}
                     </SubmitButton>
@@ -679,8 +687,8 @@ function MentorDetail() {
               <MentorCommetsContent>
                 {isActivateCommentDeleteModal && (
                   <TwoButtonModal
-                    TitleText="댓글 삭제"
-                    Text="정말로 댓글을 삭제하시겠습니까?"
+                    TitleText="コメント削除"
+                    Text="本当にコメントを削除しますか？"
                     XButtonFunc={() => {
                       setIsActivateCommentDeleteModal(false);
                     }}
@@ -688,11 +696,11 @@ function MentorDetail() {
                       setIsActivateCommentDeleteModal(false);
                       deleteComment(userCommentId);
                     }}
-                    Button1Text="네"
+                    Button1Text="はい"
                     Button2Func={() => {
                       setIsActivateCommentDeleteModal(false);
                     }}
-                    Button2Text="아니요"
+                    Button2Text="いいえ"
                     Button2bg={theme.colors.grayThree}
                   />
                 )}
@@ -758,7 +766,7 @@ function MentorDetail() {
                         });
                     }}
                   >
-                    댓글 더보기
+                    コメント詳細
                   </CommentPageNation>
                 )}
               </MentorCommetsContent>
@@ -1095,8 +1103,3 @@ const MentorDetailTag = styled.div`
 `;
 
 export default MentorDetail;
-// TODO: alert 바꾸기
-// TODO: error alert
-// TODO: 존재하지 않은 mentor있을때 redirect
-// TODO: loading 처리
-// TODO: change grid to flex

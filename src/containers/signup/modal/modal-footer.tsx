@@ -183,12 +183,12 @@ export function ModalFooter(props: ModalFooterProps) {
   async function updateMentorInfo(props: ModalFooterProps) {
     if (!props.name) {
       setOneButtonModalProps({
-        TitleText: '이름을 입력하세요',
-        Text: '이름을 입력하세요',
+        TitleText: '名前の入力',
+        Text: '名前を入力してください',
         XButtonFunc: () => {
           setIsError(false);
         },
-        ButtonText: '확인',
+        ButtonText: '確認',
         ButtonFunc: () => {
           setIsError(false);
         },
@@ -200,12 +200,12 @@ export function ModalFooter(props: ModalFooterProps) {
 
     if (!props.slackId) {
       setOneButtonModalProps({
-        TitleText: 'Slack ID를 입력하세요',
-        Text: 'Slack ID를 입력하세요',
+        TitleText: 'Slack IDを記載してください',
+        Text: 'Slack IDDを記載してください',
         XButtonFunc: () => {
           setIsError(false);
         },
-        ButtonText: '확인',
+        ButtonText: '確認',
         ButtonFunc: () => {
           setIsError(false);
         },
@@ -217,12 +217,12 @@ export function ModalFooter(props: ModalFooterProps) {
 
     if (!props.alreadyRegistered && !props.isCodeSucess) {
       setOneButtonModalProps({
-        TitleText: 'e-mail 인증을 완료해주세요',
-        Text: 'e-mail 인증을 완료해주세요',
+        TitleText: 'メール認証を完了してください',
+        Text: 'メール認証を完了してください',
         XButtonFunc: () => {
           setIsError(false);
         },
-        ButtonText: '확인',
+        ButtonText: '確認',
         ButtonFunc: () => {
           setIsError(false);
         },
@@ -249,12 +249,12 @@ export function ModalFooter(props: ModalFooterProps) {
 
       if (response.status === 200) {
         setOneButtonModalProps({
-          TitleText: '제출 성공',
-          Text: '제출에 성공하셨습니다',
+          TitleText: '提出に成功しました',
+          Text: '提出に成功しました',
           XButtonFunc: () => {
             setIsError(false);
           },
-          ButtonText: '확인',
+          ButtonText: '確認',
           ButtonFunc: () => {
             setIsError(false);
           },
@@ -265,12 +265,12 @@ export function ModalFooter(props: ModalFooterProps) {
         window.location.reload();
       } else {
         setOneButtonModalProps({
-          TitleText: '제출 실패',
-          Text: '제출에 실패하셨습니다',
+          TitleText: '提出に失敗しました',
+          Text: '提出に失敗しました',
           XButtonFunc: () => {
             setIsError(false);
           },
-          ButtonText: '확인',
+          ButtonText: '確認',
           ButtonFunc: () => {
             setIsError(false);
           },
@@ -280,12 +280,12 @@ export function ModalFooter(props: ModalFooterProps) {
       }
     } catch (err) {
       setOneButtonModalProps({
-        TitleText: '제출 실패',
-        Text: '제출에 실패하셨습니다',
+        TitleText: '提出に失敗しました',
+        Text: '提出に失敗しました',
         XButtonFunc: () => {
           setIsError(false);
         },
-        ButtonText: '확인',
+        ButtonText: '確認',
         ButtonFunc: () => {
           setIsError(false);
         },
@@ -302,12 +302,12 @@ export function ModalFooter(props: ModalFooterProps) {
 
     if (props.rows?.length === 0 && props.checked) {
       setOneButtonModalProps({
-        TitleText: '가능시간 입력',
-        Text: '입력하신 가능시간이 없습니다',
+        TitleText: '可能な時間を入力',
+        Text: '入力された可能な時間がありません',
         XButtonFunc: () => {
           setIsError(false);
         },
-        ButtonText: '확인',
+        ButtonText: '確認',
         ButtonFunc: () => {
           setIsError(false);
         },
@@ -320,12 +320,12 @@ export function ModalFooter(props: ModalFooterProps) {
 
     if (!(await validateRows(props.rows))) {
       setOneButtonModalProps({
-        TitleText: '가능시간 빈 칸',
-        Text: '가능시간에 빈 칸이 있습니다',
+        TitleText: '可能時間の空欄',
+        Text: '可能時間に空欄があります',
         XButtonFunc: () => {
           setIsError(false);
         },
-        ButtonText: '확인',
+        ButtonText: '確認',
         ButtonFunc: () => {
           setIsError(false);
         },
@@ -346,12 +346,12 @@ export function ModalFooter(props: ModalFooterProps) {
 
     if (resultVaildation === AvailableTimeError.INPUT_ERROR) {
       setOneButtonModalProps({
-        TitleText: '올바르지 않은 가능시간',
-        Text: '가능시간은 시작 시간으로부터 1시간 이상이어야 합니다',
+        TitleText: '正しくない可能な時間',
+        Text: '可能な時間は開始時間から1時間以上である必要があります',
         XButtonFunc: () => {
           setIsError(false);
         },
-        ButtonText: '확인',
+        ButtonText: '確認',
         ButtonFunc: () => {
           setIsError(false);
         },
@@ -362,12 +362,12 @@ export function ModalFooter(props: ModalFooterProps) {
       return;
     } else if (resultVaildation === AvailableTimeError.OVERLAP_ERROR) {
       setOneButtonModalProps({
-        TitleText: '가능시간 간 중복',
-        Text: '선택하신 가능시간 간에 중복이 있습니다',
+        TitleText: '可能時間の重複',
+        Text: '選択された可能な時間に重複があります',
         XButtonFunc: () => {
           setIsError(false);
         },
-        ButtonText: '확인',
+        ButtonText: '確認',
         ButtonFunc: () => {
           setIsError(false);
         },
@@ -393,12 +393,12 @@ export function ModalFooter(props: ModalFooterProps) {
 
       if (response.status === 200) {
         setOneButtonModalProps({
-          TitleText: '제출 성공',
-          Text: '제출에 성공하셨습니다',
+          TitleText: '提出に成功しました',
+          Text: '提出に成功しました',
           XButtonFunc: () => {
             setIsError(false);
           },
-          ButtonText: '확인',
+          ButtonText: '確認',
           ButtonFunc: () => {
             setIsError(false);
           },
@@ -409,12 +409,12 @@ export function ModalFooter(props: ModalFooterProps) {
         window.location.reload();
       } else {
         setOneButtonModalProps({
-          TitleText: '제출 실패',
-          Text: '제출에 실패하셨습니다',
+          TitleText: '提出に失敗しました',
+          Text: '提出に失敗しました',
           XButtonFunc: () => {
             setIsError(false);
           },
-          ButtonText: '확인',
+          ButtonText: '確認',
           ButtonFunc: () => {
             setIsError(false);
           },
@@ -424,12 +424,12 @@ export function ModalFooter(props: ModalFooterProps) {
       }
     } catch (err) {
       setOneButtonModalProps({
-        TitleText: '제출 실패',
-        Text: '제출에 실패하셨습니다',
+        TitleText: '提出に失敗しました',
+        Text: '提出に失敗しました',
         XButtonFunc: () => {
           setIsError(false);
         },
-        ButtonText: '확인',
+        ButtonText: '確認',
         ButtonFunc: () => {
           setIsError(false);
         },
@@ -451,7 +451,7 @@ export function ModalFooter(props: ModalFooterProps) {
             : () => updateMentorTime(props)
         }
       >
-        제출
+        提出
       </Button>
       {isError && <OneButtonModal {...oneButtonModalProps} />}
     </ModalFooterContainer>

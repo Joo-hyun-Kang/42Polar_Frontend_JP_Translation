@@ -77,12 +77,12 @@ export function Info(props: InfoProps) {
   async function SendEmail() {
     if (!email) {
       setOneButtonModalProps({
-        TitleText: '이메일을 입력하세요',
-        Text: '이메일을 입력하세요',
+        TitleText: 'メール認証を完了してください',
+        Text: 'メール認証を完了してください',
         XButtonFunc: () => {
           setIsError(false);
         },
-        ButtonText: '확인',
+        ButtonText: '確認',
         ButtonFunc: () => {
           setIsError(false);
         },
@@ -130,12 +130,12 @@ export function Info(props: InfoProps) {
   async function certificateEmail(code: string) {
     if (!code) {
       setOneButtonModalProps({
-        TitleText: '인증코드를 입력하세요',
-        Text: '인증코드를 입력하세요',
+        TitleText: '認証コードを入力してください',
+        Text: '認証コードを入力してください',
         XButtonFunc: () => {
           setIsError(false);
         },
-        ButtonText: '확인',
+        ButtonText: '確認',
         ButtonFunc: () => {
           setIsError(false);
         },
@@ -177,23 +177,27 @@ export function Info(props: InfoProps) {
   return (
     <Container>
       <div style={{ paddingBottom: '5px' }}>
-        <NameTitle>본인 이름</NameTitle>
+        <NameTitle>お名前</NameTitle>
         <InfoInput
           type="text"
           onChange={onNameChange}
-          placeholder="보고서 작성 등에 사용됩니다."
+          placeholder="報告書作成などに使用されます。"
           maxLength={10}
           defaultValue={defaultName}
         ></InfoInput>
       </div>
-
-      <div style={{ paddingBottom: '5px', paddingTop: '15px' }}>
-        <NameTitle>슬랙 닉네임</NameTitle>
+      <div
+        style={{
+          paddingBottom: '5px',
+          paddingTop: '15px',
+        }}
+      >
+        <NameTitle>Slackのニックネーム</NameTitle>
         <InfoInput
           type="text"
           onChange={onSlackChange}
           maxLength={100}
-          placeholder="42Slack 닉네임과 같게 입력해주세요."
+          placeholder="42Slackのニックネームと同じものを入力してください。"
           color="blue"
           defaultValue={defaultSlackId}
         ></InfoInput>
@@ -206,12 +210,12 @@ export function Info(props: InfoProps) {
             fontSize: '1.5rem',
           }}
         >
-          * 카뎃과의 연락에 사용됩니다
+          * カデットとの連絡に使用
         </div>
       </div>
       <>
         {props.alreadyRegistered && (
-          <ResultMessage>이미 이메일이 등록되었습니다</ResultMessage>
+          <ResultMessage>既にメールアドレスが登録されています</ResultMessage>
         )}
       </>
       <>
@@ -222,51 +226,49 @@ export function Info(props: InfoProps) {
               <InfoInput
                 maxLength={100}
                 onChange={onEmailChange}
-                placeholder="멘토링 안내 메일이 전송됩니다."
+                placeholder="メンタリング案内メールが送信されます。"
                 defaultValue={defaultEmail}
                 required
               />
             </div>
             <div style={{ paddingBottom: '0px', marginBottom: '0px' }}>
               <CertificationSendingButton onClick={() => SendEmail()}>
-                인증
+                認証
               </CertificationSendingButton>
               {isError && <OneButtonModal {...oneButtonModalProps} />}
               <>
                 {isMailSucess && (
-                  <ResultMessage>메일 전송 완료했습니다</ResultMessage>
+                  <ResultMessage>メール送信が完了しました</ResultMessage>
                 )}
               </>
               <>
                 {isMailFail && (
-                  <ResultMessage>메일 전송 실패했습니다</ResultMessage>
+                  <ResultMessage>メール送信に失敗しました</ResultMessage>
                 )}
               </>
               <>
                 {mailOverlaped && (
-                  <ResultMessage>사용 불가능한 이메일입니다</ResultMessage>
+                  <ResultMessage> 使用不可能なメールアドレスです</ResultMessage>
                 )}
               </>
             </div>
             <NameTitle style={{ paddingTop: '0px', marginTop: '0px' }}>
-              인증코드
+              認証コード
             </NameTitle>
             <InfoInput
               maxLength={10}
               onChange={onCodeChange}
-              placeholder="인증코드를 입력해주세요."
+              placeholder="認証コードを入力してください。"
             />
             <CertificationSendingButton onClick={() => certificateEmail(code)}>
-              확인
+              確認
             </CertificationSendingButton>
             <>
               {props.isCodeSucess && (
-                <ResultMessage>인증에 완료했습니다</ResultMessage>
+                <ResultMessage>認証が完了しました</ResultMessage>
               )}
             </>
-            <>
-              {isCodeFail && <ResultMessage>인증에 실패했습니다</ResultMessage>}
-            </>
+            <>{isCodeFail && <ResultMessage>認証に失敗しまし</ResultMessage>}</>
           </div>
         )}
       </>

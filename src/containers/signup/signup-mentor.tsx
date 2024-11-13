@@ -267,12 +267,12 @@ const SignUpMentor = () => {
   async function joinMentorServer(rows: IRows[]) {
     if (!name) {
       setOneButtonModalProps({
-        TitleText: '이름을 입력하세요',
-        Text: '이름을 입력하세요',
+        TitleText: '名前の入力',
+        Text: '名前を入力してください',
         XButtonFunc: () => {
           setIsError(false);
         },
-        ButtonText: '확인',
+        ButtonText: '確認',
         ButtonFunc: () => {
           setIsError(false);
         },
@@ -284,12 +284,12 @@ const SignUpMentor = () => {
 
     if (!slackId) {
       setOneButtonModalProps({
-        TitleText: 'Slack ID를 입력하세요',
-        Text: 'Slack ID를 입력하세요',
+        TitleText: 'Slack IDを記載してください',
+        Text: 'Slack IDDを記載してください',
         XButtonFunc: () => {
           setIsError(false);
         },
-        ButtonText: '확인',
+        ButtonText: '確認',
         ButtonFunc: () => {
           setIsError(false);
         },
@@ -301,12 +301,12 @@ const SignUpMentor = () => {
 
     if (!company) {
       setOneButtonModalProps({
-        TitleText: '소속을 입력하세요',
-        Text: '소속을 입력하세요',
+        TitleText: '所属を記載してください',
+        Text: '所属を記載してください',
         XButtonFunc: () => {
           setIsError(false);
         },
-        ButtonText: '확인',
+        ButtonText: '確認',
         ButtonFunc: () => {
           setIsError(false);
         },
@@ -318,12 +318,12 @@ const SignUpMentor = () => {
 
     if (!duty) {
       setOneButtonModalProps({
-        TitleText: '직급을 입력하세요',
-        Text: '직급을 입력하세요',
+        TitleText: '職級を記載してください',
+        Text: '職級を記載してください',
         XButtonFunc: () => {
           setIsError(false);
         },
-        ButtonText: '확인',
+        ButtonText: '確認',
         ButtonFunc: () => {
           setIsError(false);
         },
@@ -335,12 +335,12 @@ const SignUpMentor = () => {
 
     if (!alreadyRegistered && !isCodeSucess) {
       setOneButtonModalProps({
-        TitleText: 'e-mail 인증을 완료해주세요',
-        Text: 'e-mail 인증을 완료해주세요',
+        TitleText: 'メール認証を完了してください',
+        Text: 'メール認証を完了してください',
         XButtonFunc: () => {
           setIsError(false);
         },
-        ButtonText: '확인',
+        ButtonText: '確認',
         ButtonFunc: () => {
           setIsError(false);
         },
@@ -354,12 +354,13 @@ const SignUpMentor = () => {
 
     if (rows?.length === 0 && checked) {
       setOneButtonModalProps({
-        TitleText: '가능시간 입력',
-        Text: '입력하신 가능시간이 없습니다',
+        TitleText: '可能な時間を入力',
+        Text: '入力された可能な時間がありません',
+
         XButtonFunc: () => {
           setIsError(false);
         },
-        ButtonText: '확인',
+        ButtonText: '確認',
         ButtonFunc: () => {
           setIsError(false);
         },
@@ -372,12 +373,12 @@ const SignUpMentor = () => {
 
     if (!(await validateRows(rows))) {
       setOneButtonModalProps({
-        TitleText: '가능시간 빈 칸',
-        Text: '가능시간에 빈 칸이 있습니다',
+        TitleText: '可能時間の空欄',
+        Text: '可能時間に空欄があります',
         XButtonFunc: () => {
           setIsError(false);
         },
-        ButtonText: '확인',
+        ButtonText: '確認',
         ButtonFunc: () => {
           setIsError(false);
         },
@@ -396,12 +397,12 @@ const SignUpMentor = () => {
 
     if (resultVaildation === AvailableTimeError.INPUT_ERROR) {
       setOneButtonModalProps({
-        TitleText: '올바르지 않은 가능시간',
-        Text: '가능시간은 시작 시간으로부터 1시간 이상이어야 합니다',
+        TitleText: '正しくない可能な時間',
+        Text: '可能な時間は開始時間から1時間以上である必要があります',
         XButtonFunc: () => {
           setIsError(false);
         },
-        ButtonText: '확인',
+        ButtonText: '確認',
         ButtonFunc: () => {
           setIsError(false);
         },
@@ -412,12 +413,12 @@ const SignUpMentor = () => {
       return;
     } else if (resultVaildation === AvailableTimeError.OVERLAP_ERROR) {
       setOneButtonModalProps({
-        TitleText: '가능시간 간 중복',
-        Text: '선택하신 가능시간 간에 중복이 있습니다',
+        TitleText: '可能時間の重複',
+        Text: '選択された可能な時間に重複があります',
         XButtonFunc: () => {
           setIsError(false);
         },
-        ButtonText: '확인',
+        ButtonText: '確認',
         ButtonFunc: () => {
           setIsError(false);
         },
@@ -450,12 +451,12 @@ const SignUpMentor = () => {
 
       if (response.status === 200) {
         setOneButtonModalProps({
-          TitleText: '제출에 성공하셨습니다',
-          Text: '제출에 성공하셨습니다',
+          TitleText: '提出に成功しました',
+          Text: '提出に成功しました',
           XButtonFunc: () => {
             setIsError(false);
           },
-          ButtonText: '확인',
+          ButtonText: '確認',
           ButtonFunc: () => {
             setIsError(false);
           },
@@ -468,12 +469,12 @@ const SignUpMentor = () => {
         setIsRedirection(true);
       } else {
         setOneButtonModalProps({
-          TitleText: '제출에 실패하셨습니다',
-          Text: '제출에 실패하셨습니다',
+          TitleText: '提出に失敗しました',
+          Text: '提出に失敗しました',
           XButtonFunc: () => {
             setIsError(false);
           },
-          ButtonText: '확인',
+          ButtonText: '確認',
           ButtonFunc: () => {
             setIsError(false);
           },
@@ -483,12 +484,12 @@ const SignUpMentor = () => {
       }
     } catch (err) {
       setOneButtonModalProps({
-        TitleText: '제출에 실패하셨습니다',
-        Text: '제출에 실패하셨습니다',
+        TitleText: '提出に失敗しました',
+        Text: '提出に失敗しました',
         XButtonFunc: () => {
           setIsError(false);
         },
-        ButtonText: '확인',
+        ButtonText: '確認',
         ButtonFunc: () => {
           setIsError(false);
         },
@@ -530,12 +531,12 @@ const SignUpMentor = () => {
   async function SendEmail(email: string) {
     if (!email) {
       setOneButtonModalProps({
-        TitleText: '이메일을 입력하세요',
-        Text: '이메일을 입력하세요',
+        TitleText: 'メールアドレスを入力してください',
+        Text: 'メールアドレスを入力してください',
         XButtonFunc: () => {
           setIsError(false);
         },
-        ButtonText: '확인',
+        ButtonText: '確認',
         ButtonFunc: () => {
           setIsError(false);
         },
@@ -583,12 +584,12 @@ const SignUpMentor = () => {
   async function certificateEmail(code: string) {
     if (!code) {
       setOneButtonModalProps({
-        TitleText: '인증코드를 입력하세요',
-        Text: '인증코드를 입력하세요',
+        TitleText: '認証コードを入力してください',
+        Text: '認証コードを入力してください',
         XButtonFunc: () => {
           setIsError(false);
         },
-        ButtonText: '확인',
+        ButtonText: '確認',
         ButtonFunc: () => {
           setIsError(false);
         },
@@ -632,26 +633,26 @@ const SignUpMentor = () => {
       {!isMobile && (
         <ContainersPc>
           <RequiredWrapper>
-            <HeadLetters>필수 정보 입력</HeadLetters>
+            <HeadLetters>必須情報の入力</HeadLetters>
             <SingupImage src={singupImage} alt="singup-image" />
 
             <div style={{ paddingBottom: '5px' }}>
-              <NameTitle>본인 이름</NameTitle>
+              <NameTitle>お名前</NameTitle>
               <InfoInput
                 type="text"
                 onChange={onNameChange}
-                placeholder="보고서 작성 등에 사용됩니다."
+                placeholder="報告書作成などに使用されます。"
                 maxLength={10}
               ></InfoInput>
             </div>
 
             <div style={{ paddingBottom: '0px', paddingTop: '15px' }}>
-              <NameTitle>슬랙 닉네임</NameTitle>
+              <NameTitle>Slackのニックネーム</NameTitle>
               <InfoInput
                 type="text"
                 onChange={onSlackChange}
                 maxLength={100}
-                placeholder="42Slack 닉네임과 같게 입력해주세요."
+                placeholder="42Slackのニックネームと同じものを入力してください。"
                 color="blue"
               ></InfoInput>
               <div
@@ -663,17 +664,17 @@ const SignUpMentor = () => {
                   fontSize: '1.5rem',
                 }}
               >
-                * 카뎃과의 연락에 사용됩니다
+                * カデットとの連絡に使用されます
               </div>
             </div>
 
             <div style={{ paddingBottom: '5px', paddingTop: '5px' }}>
-              <NameTitle>소속</NameTitle>
+              <NameTitle>所属</NameTitle>
               <InfoInput
                 type="text"
                 onChange={onCompanyChange}
                 maxLength={100}
-                placeholder="현재 재직중인 회사명을 적어주세요."
+                placeholder="現在勤務中の会社名を記載してください。"
                 color="blue"
               ></InfoInput>
               <div
@@ -685,7 +686,7 @@ const SignUpMentor = () => {
                   fontSize: '1.5rem',
                 }}
               >
-                * 재직증명서에서 명칭과 동일해야합니다
+                * 在職証明書と同じ名称である必要があります
               </div>
               <div
                 style={{
@@ -696,16 +697,16 @@ const SignUpMentor = () => {
                   fontSize: '1.5rem',
                 }}
               >
-                * 보고서 업무에 사용(SongPD님에게만 공개)
+                * 報告業務に使用 (運営陣のみに公開)
               </div>
             </div>
             <div style={{ paddingBottom: '5px', paddingTop: '5px' }}>
-              <NameTitle>직급</NameTitle>
+              <NameTitle>職級</NameTitle>
               <InfoInput
                 type="text"
                 onChange={onDutyChange}
                 maxLength={100}
-                placeholder="현재 직급을 적어주세요.(없다면 없음)"
+                placeholder="現在の職級を記入してください。（ない場合は「なし」と記載してください)"
                 color="blue"
               ></InfoInput>
               <div
@@ -717,7 +718,7 @@ const SignUpMentor = () => {
                   fontSize: '1.5rem',
                 }}
               >
-                * 다양한 형태로 적어주셔도 됩니다
+                * 様々な形で記載しても構いません
               </div>
               <div
                 style={{
@@ -728,13 +729,15 @@ const SignUpMentor = () => {
                   fontSize: '1.5rem',
                 }}
               >
-                * 보고서 업무에 사용(SongPD님에게만 공개)
+                * 報告業務に使用 (運営陣のみに公開)
               </div>
             </div>
 
             <>
               {alreadyRegistered && (
-                <ResultMessage>이미 이메일이 등록되었습니다</ResultMessage>
+                <ResultMessage>
+                  既にメールアドレスが登録されています
+                </ResultMessage>
               )}
             </>
             <>
@@ -745,54 +748,54 @@ const SignUpMentor = () => {
                     <InfoInput
                       maxLength={100}
                       onChange={onEmailChange}
-                      placeholder="멘토링 안내 메일이 전송됩니다."
+                      placeholder="メンタリング案内メールが送信されます。"
                     />
                   </div>
                   <div style={{ paddingBottom: '0px', marginBottom: '0px' }}>
                     <CertificationSendingButton
                       onClick={() => SendEmail(email)}
                     >
-                      인증
+                      認証
                     </CertificationSendingButton>
                     <>
                       {isMailSucess && (
-                        <ResultMessage>메일 전송 완료했습니다</ResultMessage>
+                        <ResultMessage>メール送信が完了しました</ResultMessage>
                       )}
                     </>
                     <>
                       {isMailFail && (
-                        <ResultMessage>메일 전송 실패했습니다</ResultMessage>
+                        <ResultMessage>メール送信に失敗しました</ResultMessage>
                       )}
                     </>
                     <>
                       {mailOverlaped && (
                         <ResultMessage>
-                          사용 불가능한 이메일입니다
+                          使用不可能なメールアドレスです
                         </ResultMessage>
                       )}
                     </>
                   </div>
                   <NameTitle style={{ paddingTop: '0px', marginTop: '0px' }}>
-                    인증코드
+                    認証コード
                   </NameTitle>
                   <InfoInput
                     maxLength={10}
                     onChange={onCodeChange}
-                    placeholder="인증코드를 입력해주세요."
+                    placeholder="認証コードを入力してください。"
                   />
                   <CertificationSendingButton
                     onClick={() => certificateEmail(code)}
                   >
-                    확인
+                    確認
                   </CertificationSendingButton>
                   <>
                     {isCodeSucess && (
-                      <ResultMessage>인증에 완료했습니다</ResultMessage>
+                      <ResultMessage>認証が完了しました</ResultMessage>
                     )}
                   </>
                   <>
                     {isCodeFail && (
-                      <ResultMessage>인증에 실패했습니다</ResultMessage>
+                      <ResultMessage>認証に失敗しました</ResultMessage>
                     )}
                   </>
                 </div>
@@ -801,10 +804,10 @@ const SignUpMentor = () => {
           </RequiredWrapper>
           <OptionWrapper>
             <HeadLetters style={{ paddingLeft: '16rem' }}>
-              멘토링 가능 시간
+              メンタリング可能時間
             </HeadLetters>
             <ToggleContainer>
-              <NameTitle>멘토링 가능/불가</NameTitle>
+              <NameTitle>メンタリング可能/不可</NameTitle>
               <Switch
                 checked={checked}
                 onChange={handleChange}
@@ -812,7 +815,7 @@ const SignUpMentor = () => {
                 sx={{ mb: 1, mr: -6 }}
               />
               <BodySmallFont style={{ paddingBottom: '6px' }}>
-                가능
+                可能
               </BodySmallFont>
             </ToggleContainer>
             <NameTitle
@@ -821,14 +824,14 @@ const SignUpMentor = () => {
                 height: '0rem',
               }}
             >
-              시간
+              時間
             </NameTitle>
             <TimeTableContainer style={{ marginTop: '0rem' }}>
               <ColumnDays>
-                <BodyBigFont>요일</BodyBigFont>
+                <BodyBigFont>曜日</BodyBigFont>
               </ColumnDays>
               <ColumnName>
-                <BodyBigFont>가능시간</BodyBigFont>
+                <BodyBigFont>可能時間</BodyBigFont>
               </ColumnName>
               <ColumnLine></ColumnLine>
             </TimeTableContainer>
@@ -855,7 +858,7 @@ const SignUpMentor = () => {
               }}
               onClick={() => joinMentorServer(rows)}
             >
-              제출
+              提出
               {isRedirection && <Navigate to="/" />}
             </Button>
             {isError && <OneButtonModal {...oneButtonModalProps} />}
@@ -865,26 +868,26 @@ const SignUpMentor = () => {
       {isMobile && (
         <ContainersMobile>
           <RequiredWrapper>
-            <HeadLetters>필수 정보 입력</HeadLetters>
+            <HeadLetters>必須情報の入力</HeadLetters>
             <SingupImage src={singupImage} alt="singup-image" />
 
             <div style={{ paddingBottom: '5px' }}>
-              <NameTitle>본인 이름</NameTitle>
+              <NameTitle>お名前</NameTitle>
               <InfoInput
                 type="text"
                 onChange={onNameChange}
-                placeholder="보고서 작성 등에 사용됩니다."
+                placeholder="報告書作成などに使用されます。"
                 maxLength={10}
               ></InfoInput>
             </div>
 
             <div style={{ paddingBottom: '0px', paddingTop: '15px' }}>
-              <NameTitle>슬랙 닉네임</NameTitle>
+              <NameTitle>Slackのニックネーム</NameTitle>
               <InfoInput
                 type="text"
                 onChange={onSlackChange}
                 maxLength={100}
-                placeholder="42Slack 닉네임과 같게 입력해주세요."
+                placeholder="42Slackのニックネームと同じものを入力してください。"
                 color="blue"
               ></InfoInput>
               <div
@@ -896,17 +899,17 @@ const SignUpMentor = () => {
                   fontSize: '1.5rem',
                 }}
               >
-                * 카뎃과의 연락에 사용됩니다
+                * カデットとの連絡に使用されます
               </div>
             </div>
 
             <div style={{ paddingBottom: '5px', paddingTop: '5px' }}>
-              <NameTitle>소속</NameTitle>
+              <NameTitle>所属</NameTitle>
               <InfoInput
                 type="text"
                 onChange={onCompanyChange}
                 maxLength={100}
-                placeholder="현재 재직중인 회사명을 적어주세요."
+                placeholder="現在勤務中の会社名を記載してください。"
                 color="blue"
               ></InfoInput>
               <div
@@ -918,7 +921,7 @@ const SignUpMentor = () => {
                   fontSize: '1.5rem',
                 }}
               >
-                * 재직증명서에서 명칭과 동일해야합니다
+                * 在職証明書と同じ名称である必要があります
               </div>
               <div
                 style={{
@@ -929,16 +932,16 @@ const SignUpMentor = () => {
                   fontSize: '1.5rem',
                 }}
               >
-                * 보고서 업무에 사용(SongPD님에게만 공개)
+                * 報告業務に使用 (運営陣のみに公開)
               </div>
             </div>
             <div style={{ paddingBottom: '5px', paddingTop: '5px' }}>
-              <NameTitle>직급</NameTitle>
+              <NameTitle>職級</NameTitle>
               <InfoInput
                 type="text"
                 onChange={onDutyChange}
                 maxLength={100}
-                placeholder="현재 직급을 적어주세요.(없다면 없음)"
+                placeholder="現在の職級を記入してください。（ない場合は「なし」と記載してください)"
                 color="blue"
               ></InfoInput>
               <div
@@ -950,7 +953,7 @@ const SignUpMentor = () => {
                   fontSize: '1.5rem',
                 }}
               >
-                * 다양한 형태로 적어주셔도 됩니다
+                * 様々な形で記載しても構いません
               </div>
               <div
                 style={{
@@ -961,13 +964,15 @@ const SignUpMentor = () => {
                   fontSize: '1.5rem',
                 }}
               >
-                * 보고서 업무에 사용(SongPD님에게만 공개)
+                * 報告業務に使用 (運営陣のみに公開)
               </div>
             </div>
 
             <>
               {alreadyRegistered && (
-                <ResultMessage>이미 이메일이 등록되었습니다</ResultMessage>
+                <ResultMessage>
+                  既にメールアドレスが登録されています
+                </ResultMessage>
               )}
             </>
             <>
@@ -978,54 +983,54 @@ const SignUpMentor = () => {
                     <InfoInput
                       maxLength={100}
                       onChange={onEmailChange}
-                      placeholder="멘토링 안내 메일이 전송됩니다."
+                      placeholder="メンタリング案内メールが送信されます。"
                     />
                   </div>
                   <div style={{ paddingBottom: '0px', marginBottom: '0px' }}>
                     <CertificationSendingButton
                       onClick={() => SendEmail(email)}
                     >
-                      인증
+                      認証
                     </CertificationSendingButton>
                     <>
                       {isMailSucess && (
-                        <ResultMessage>메일 전송 완료했습니다</ResultMessage>
+                        <ResultMessage>メール送信が完了しました</ResultMessage>
                       )}
                     </>
                     <>
                       {isMailFail && (
-                        <ResultMessage>메일 전송 실패했습니다</ResultMessage>
+                        <ResultMessage>メール送信に失敗しました</ResultMessage>
                       )}
                     </>
                     <>
                       {mailOverlaped && (
                         <ResultMessage>
-                          사용 불가능한 이메일입니다
+                          使用不可能なメールアドレスです
                         </ResultMessage>
                       )}
                     </>
                   </div>
                   <NameTitle style={{ paddingTop: '0px', marginTop: '0px' }}>
-                    인증코드
+                    認証コード
                   </NameTitle>
                   <InfoInput
                     maxLength={10}
                     onChange={onCodeChange}
-                    placeholder="인증코드를 입력해주세요."
+                    placeholder="認証コードを入力してください。"
                   />
                   <CertificationSendingButton
                     onClick={() => certificateEmail(code)}
                   >
-                    확인
+                    確認
                   </CertificationSendingButton>
                   <>
                     {isCodeSucess && (
-                      <ResultMessage>인증에 완료했습니다</ResultMessage>
+                      <ResultMessage>認証が完了しました</ResultMessage>
                     )}
                   </>
                   <>
                     {isCodeFail && (
-                      <ResultMessage>인증에 실패했습니다</ResultMessage>
+                      <ResultMessage>認証に失敗しました</ResultMessage>
                     )}
                   </>
                 </div>
@@ -1034,10 +1039,10 @@ const SignUpMentor = () => {
           </RequiredWrapper>
           <OptionWrapper>
             <HeadLetters style={{ paddingLeft: '16rem' }}>
-              멘토링 가능 시간
+              メンタリング可能時間
             </HeadLetters>
             <ToggleContainer>
-              <NameTitle>멘토링 가능/불가</NameTitle>
+              <NameTitle>メンタリング可能/不可</NameTitle>
               <Switch
                 checked={checked}
                 onChange={handleChange}
@@ -1045,7 +1050,7 @@ const SignUpMentor = () => {
                 sx={{ mb: 1, mr: -6 }}
               />
               <BodySmallFont style={{ paddingBottom: '6px' }}>
-                가능
+                可能
               </BodySmallFont>
             </ToggleContainer>
             <NameTitle
@@ -1054,14 +1059,14 @@ const SignUpMentor = () => {
                 height: '0rem',
               }}
             >
-              시간
+              時間
             </NameTitle>
             <TimeTableContainer style={{ marginTop: '0rem' }}>
               <ColumnDays>
-                <BodyBigFont>요일</BodyBigFont>
+                <BodyBigFont>曜日</BodyBigFont>
               </ColumnDays>
               <ColumnName>
-                <BodyBigFont>가능시간</BodyBigFont>
+                <BodyBigFont>可能時間</BodyBigFont>
               </ColumnName>
               <ColumnLine></ColumnLine>
             </TimeTableContainer>
@@ -1088,7 +1093,7 @@ const SignUpMentor = () => {
               }}
               onClick={() => joinMentorServer(rows)}
             >
-              제출
+              提出
               {isRedirection && <Navigate to="/" />}
             </Button>
             {isError && <OneButtonModal {...oneButtonModalProps} />}
