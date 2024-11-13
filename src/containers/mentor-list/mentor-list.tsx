@@ -120,10 +120,10 @@ const MentorList = observer(() => {
             <Text style={{ color: defaultTheme.colors.polarSimpleMain }}>
               {MentorsStore.mentorsList.mentors.length}{' '}
             </Text>
-            <Text>명의 멘토님이 기다립니다.</Text>
+            <Text>名のメンターが待っています。</Text>
           </TextContainer>
           <SearchBox
-            placeholder={'이름, 인트라 아이디'}
+            placeholder={'名前、イントラID'}
             onChange={e => {
               setSearch(e.target.value);
             }}

@@ -48,7 +48,7 @@ const MentorKeywordList = observer(() => {
           }}
           color={defaultTheme.colors.polarBrightMain}
         >
-          전체
+          全て
         </KeywordButton>
         <KeywordButton
           onClick={() => {
@@ -56,7 +56,7 @@ const MentorKeywordList = observer(() => {
           }}
           color={defaultTheme.colors.polarBrightMain}
         >
-          {isExpand ? '숨기기' : '펼치기'}
+          {isExpand ? '隠す' : '開く'}
         </KeywordButton>
         {isExpand && (
           <>

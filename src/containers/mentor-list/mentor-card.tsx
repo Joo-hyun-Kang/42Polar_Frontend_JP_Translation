@@ -122,7 +122,7 @@ export function MentorCard(props: CardProps) {
           src={props.profileImage ? props.profileImage : defaultProfile}
         />
         <ProfileRight>
-          <ProfileName>{props.name} 멘토</ProfileName>
+          <ProfileName>{props.name} </ProfileName>
           {props.tags &&
             props.tags
               ?.filter((e, i) => i < 3)
@@ -137,13 +137,13 @@ export function MentorCard(props: CardProps) {
       <Introduce>
         {props.introduction
           ? `${sliceMoreInfoStr(props.introduction, 100)}`
-          : '프로필을 작성중입니다. ✍🏼'}
+          : 'プロフィールを作成中です。 ✍🏼'}
       </Introduce>
       <ButtonWrapper to={'/mentor-detail/' + props.intraId}>
         <Button
           style={{ backgroundColor: defaultTheme.colors.polarBrightMain }}
         >
-          자세히 보기
+          詳細を見る
         </Button>
       </ButtonWrapper>
     </Container>
