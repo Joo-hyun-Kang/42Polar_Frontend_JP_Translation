@@ -36,7 +36,7 @@ const isNeedJoin = (config?: AxiosRequestConfig<any>): boolean => {
  * @param method Method, enum type
  * @param url Path
  * @param config Config (Not required)
- * @returns Axios 요청과 동일
+ * @returns Axios リクエストと同じ
  */
 export const axiosWithNoData = async (
   method: AXIOS_METHOD_WITH_NO_DATA,
@@ -64,7 +64,7 @@ export const axiosWithNoData = async (
  * @param url Path
  * @param data Data (Not required)
  * @param config Config (Not required)
- * @returns Axios 요청과 동일
+ * @returns Axios リクエストと同じ
  */
 export const axiosWithData = async (
   method: AXIOS_METHOD_WITH_DATA,

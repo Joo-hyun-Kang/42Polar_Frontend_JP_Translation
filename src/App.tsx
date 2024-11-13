@@ -14,10 +14,10 @@ import { Suspense } from 'react';
 import ScrollToTop from './containers/scroll-to-top/scroll-to-top';
 
 /*
- * <Route path='/경로' element={<컴포넌트 />}
- * ex) <Route path="*" element={<NotFound />} />
+ * <Route path='/パス' element={<コンポーネント />}のように設定します。
+ * 例) <Route path="*" element={<NotFound />} />
  *
- * {{BASE_URL}}/경로로 해당 컴포넌트 접근 가능
+ * {{BASE_URL}}/パス で該当のコンポーネントにアクセス可能です。
  */
 
 const MentorList = loadable(

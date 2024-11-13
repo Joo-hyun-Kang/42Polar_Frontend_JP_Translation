@@ -38,7 +38,7 @@ class AuthStore {
   }
 
   /**
-   * 로그아웃, 토큰 및 AuthStore 값 초기화
+   * ログアウト、トークンおよびAuthStoreの値を初期化
    */
   async Logout() {
     removeCookie(TOKEN_LIST.ACCESS_TOKEN, DEFAULT_COOKIE_OPTION);
@@ -49,7 +49,7 @@ class AuthStore {
   }
 
   /**
-   * 로그인, 토큰 및 AuthStore 값 설정
+   * ログイン、トークンおよびAuthStoreの値を設定
    */
   Login() {
     //axiosInstance
@@ -64,7 +64,7 @@ class AuthStore {
   }
 
   /**
-   * 테스트용 Login Mock function
+   *  テスト用のログインモック関数
    */
   //Login() {
   //  setCookie(TOKEN_LIST.ACCESS_TOKEN, '', DEFAULT_COOKIE_OPTION);
@@ -74,28 +74,28 @@ class AuthStore {
   //}
 
   /**
-   * @returns 쿠키에 저장된 Access Token을 가져옴, 없으면 undefined
+   * @returns  クッキーに保存されているアクセストークンを取得。存在しない場合はundefinedを返します
    */
   getAccessToken() {
     return getCookie(TOKEN_LIST.ACCESS_TOKEN);
   }
 
   /**
-   * @returns (쿠키)로그인 된 유저의 인트라 아이디를 가져옴, 없으면 undefined
+   * @returns (クッキー)ログイン済みユーザーのイントラIDを取得。存在しない場合はundefinedを返します
    */
   getUserIntraId() {
     return getCookie(TOKEN_LIST.INTRA_ID);
   }
 
   /**
-   * @returns (쿠키)로그인 된 유저의 ROLE을 가져옴, 없으면 undefined
+   * @returns (クッキー)ログイン済みユーザーのROLEを取得。存在しない場合はundefinedを返します
    */
   getUserRole() {
     return getCookie(TOKEN_LIST.USER_ROLE);
   }
 
   /**
-   * @returns (쿠키)로그인 된 유저의 JOIN을 가져옴, 없으면 undefined
+   * @returns  (クッキー)ログイン済みユーザーのJOINを取得。存在しない場合はundefinedを返します
    */
   getUserJoin() {
     return getCookie(TOKEN_LIST.JOIN);

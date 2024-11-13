@@ -3,13 +3,13 @@ import { Cookies } from 'react-cookie';
 const cookies = new Cookies();
 
 /**
- * 하루를 초로 환산
+ * １日を秒で変換
  * 60 * 60 * 24
  */
 const DAY_TO_SECOND = 86400;
 
 /**
- * 쿠키 이름 리스트
+ * クッキーの名称リスト
  */
 export const TOKEN_LIST = {
   ACCESS_TOKEN: 'access_token',
@@ -19,7 +19,7 @@ export const TOKEN_LIST = {
 };
 
 /**
- * 쿠키 옵션
+ * クッキーのオプション
  */
 export interface COOKIE_OPTION {
   path?: string;
@@ -33,7 +33,7 @@ export interface COOKIE_OPTION {
 }
 
 /**
- * 쿠키 기본 설정
+ * クッキーの基本セット
  */
 export const DEFAULT_COOKIE_OPTION: COOKIE_OPTION = {
   path: '/',
@@ -41,10 +41,10 @@ export const DEFAULT_COOKIE_OPTION: COOKIE_OPTION = {
 };
 
 /**
- * 토큰 설정 함수
- * @param tokenName 토큰 이름
- * @param value 토큰 값
- * @param option 옵션
+ * トークン設定関数
+ * @param tokenName トークン名
+ * @param value トークンの値
+ * @param option オプション
  * example) { path: '/', secure: true, sameSite: "none" }
  */
 export const setCookie = (
@@ -56,18 +56,18 @@ export const setCookie = (
 };
 
 /**
- * 토큰 가져오는 함수
- * @param tokenName 토큰 이름
- * @returns 토큰 이름에 해당하는 쿠키 값
+ * トークン取得関数
+ * @param tokenName トークン名
+ * @returns トークン名に対応するクッキーの値
  */
 export const getCookie = (tokenName: string) => {
   return cookies.get(tokenName);
 };
 
 /**
- * 토큰 삭제하는 함수
- * @param tokenName 토큰 이름
- * @param option 옵션
+ * トークン削除関数
+ * @param tokenName トークン名
+ * @param option オプション
  */
 export const removeCookie = (tokenName: string, option?: COOKIE_OPTION) => {
   cookies.remove(tokenName, { ...option });

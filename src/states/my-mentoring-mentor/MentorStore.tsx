@@ -62,7 +62,7 @@ class MentorStore {
       },
     )
       .then(() => {
-        alert('이메일 변경 완료');
+        alert('メールの更新の完了');
         window.location.reload();
       })
       .catch(err => {
