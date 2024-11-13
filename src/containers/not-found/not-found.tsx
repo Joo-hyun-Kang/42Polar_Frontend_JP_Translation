@@ -14,9 +14,9 @@ const NotFound = () => {
   return (
     <Background>
       <OneButtonModal
-        TitleText="❌ 잘못된 페이지 요청"
+        TitleText="❌ 不正なページリクエスト"
         Text="SOMETHING WENT WRONG (404)"
-        ButtonText="뒤로가기"
+        ButtonText="戻る"
         ButtonBg={`${defaultTheme.colors.Red}`}
         ButtonFunc={() => {
           navi(-1);

@@ -38,7 +38,7 @@ export function ApplyCalendarModal(props: ApplyCalendarModalProps) {
       <ModalBox>
         <TitleContainer>
           <ModalTitle style={{ fontSize: '2rem' }}>
-            ⏰ 멘토링 일정 선택
+            ⏰ メンタリング日程の選択
           </ModalTitle>
           <FontAwesomeIcon
             icon={faX}

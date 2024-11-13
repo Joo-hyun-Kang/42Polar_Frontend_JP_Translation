@@ -90,8 +90,8 @@ const MainPage = () => {
               </ImageGrid1>
             </MainImageStyle>
             <TitleStyle>
-              나에게 꼭 맞는
-              <MainBlueBody> 멘토</MainBlueBody> 선택하기
+              自分にぴったりの
+              <MainBlueBody> メンターを</MainBlueBody> 選ぶ
             </TitleStyle>
             <ClickContainer>
               {keyWords?.map((words: { name: string }, index: number) => {
@@ -165,7 +165,7 @@ const MainPage = () => {
               </MoImageGrid1>
             </MainImageStyle2>
             <TitleStyle2>
-              나에게 꼭 맞는 <MainBlueBody> 멘토 </MainBlueBody> 선택하기
+              自分にぴったり <MainBlueBody> メンターを </MainBlueBody> 選ぶ
             </TitleStyle2>
             <ClickContainer2>
               {keyWords?.map((words: { name: string }, index: number) => {

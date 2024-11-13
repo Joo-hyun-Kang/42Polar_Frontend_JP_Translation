@@ -85,7 +85,7 @@ const Topic = styled.div`
 `;
 
 const getDayOfWeek = (day: number): string => {
-  const date: string[] = ['일', '월', '화', '수', '목', '금', '토'];
+  const date: string[] = ['日', '月', '火', '水', '木', '金', '土'];
   return date[day];
 };
 
@@ -101,12 +101,12 @@ const getDurationTime = (meetingAt: Date[]): string => {
   const hour = meetingAt[1].getHours() - meetingAt[0].getHours();
   let minute = meetingAt[1].getMinutes() - meetingAt[0].getMinutes();
   minute = minute > 0 ? minute : -minute;
-  return `${hour}시간 ${minute.toString().padStart(2, '0')}분`;
+  return `${hour}時間 ${minute.toString().padStart(2, '0')}分`;
 };
 
 const getMeetingAt = (meetingAt: Date[]): string => {
   if (!meetingAt || isNaN(meetingAt[0].getHours())) {
-    return '미정';
+    return '未定';
   }
   const hour = meetingAt[0].getHours().toString().padStart(2, '0');
   const minute = meetingAt[0].getMinutes().toString().padStart(2, '0');
@@ -183,9 +183,9 @@ export function MentorCard(props: CardProps) {
       <Container>
         <Header>
           <LeftData>
-            <MentorName>{log.mentor.name} 멘토님</MentorName>
-            <RequestTime>요청 | {formatDate(log.createdAt)}</RequestTime>
-            <MeetingAt>만남 | {getMeetingAt(log.meta.meetingAt)}</MeetingAt>
+            <MentorName>{log.mentor.name} メンター</MentorName>
+            <RequestTime>申し込み | {formatDate(log.createdAt)}</RequestTime>
+            <MeetingAt>お出合い | {getMeetingAt(log.meta.meetingAt)}</MeetingAt>
           </LeftData>
           <RightData style={{ backgroundColor: getColor(log.status) }}>
             <Status>{log.status}</Status>
@@ -194,7 +194,7 @@ export function MentorCard(props: CardProps) {
         <Topic>{log.topic}</Topic>
         <Bottom>
           <div></div>
-          <DetailsButton onClick={handleOpen}>전체보기 &gt;</DetailsButton>
+          <DetailsButton onClick={handleOpen}>詳細 &gt;</DetailsButton>
         </Bottom>
       </Container>
     </>

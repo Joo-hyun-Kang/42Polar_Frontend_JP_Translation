@@ -162,7 +162,7 @@ export const TextUnder = styled.span`
 export const TitleStyle = styled.div`
   box-sizing: border-box;
   border-bottom: 1px solid black;
-  font-size: 4.5rem;
+  font-size: 3.8rem;
   margin-top: -2rem;
   align-items: center;
   justify-content: center;
@@ -174,7 +174,7 @@ export const TitleStyle2 = styled.div`
   box-sizing: border-box;
   border-bottom: 1px solid black;
   padding-bottom: 3rem;
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-top: 4.5rem;
   bottom: 0;
   grid-area: title;

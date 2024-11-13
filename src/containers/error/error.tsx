@@ -53,7 +53,7 @@ export function Error(props: ErrorProps) {
               backgroundColor: defaultTheme.colors.Red,
             }}
           >
-            {sliceMoreInfoStr('닫기', 6)}
+            {sliceMoreInfoStr('閉じる', 6)}
           </ModalButton>
         </ModalButtonContainer>
       </ModalBox>

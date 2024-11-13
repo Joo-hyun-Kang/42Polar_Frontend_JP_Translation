@@ -132,7 +132,8 @@ function ApplyCalendar(props: ApplyCalendarModalProps) {
           setGetAvailableTime(true);
         } else {
           ErrorStore.on(
-            '멘토 데이터를 가져오는 중 오류가 발생하였습니다.\n 다시 시도해주세요.',
+            'メンターデータの取得中にエラーが発生しました。\n再度お試しください。',
+
             ERROR_DEFAULT_VALUE.TITLE,
           );
           props.XButtonFunc();
@@ -140,7 +141,7 @@ function ApplyCalendar(props: ApplyCalendarModalProps) {
       });
     } catch (error) {
       ErrorStore.on(
-        '멘토 데이터를 가져오는 중 오류가 발생하였습니다.\n 다시 시도해주세요.',
+        'メンターデータの取得中にエラーが発生しました。\n再度お試しください。',
         ERROR_DEFAULT_VALUE.TITLE,
       );
       props.XButtonFunc();
@@ -170,7 +171,7 @@ function ApplyCalendar(props: ApplyCalendarModalProps) {
             if (response.status === 200) setRequestTime(response.data);
             else {
               ErrorStore.on(
-                '가능 시간 데이터를 가져오는 중 오류가 발생하였습니다.\n 다시 시도해주세요.',
+                '可能な時間データの取得中にエラーが発生しました。\n再度お試しください。',
                 ERROR_DEFAULT_VALUE.TITLE,
               );
               props.XButtonFunc();
@@ -195,7 +196,7 @@ function ApplyCalendar(props: ApplyCalendarModalProps) {
           });
       } catch (error) {
         ErrorStore.on(
-          '가능 시간 데이터를 가져오는 중 오류가 발생하였습니다.\n 다시 시도해주세요.',
+          '可能な時間データの取得中にエラーが発生しました。\n再度お試しください。',
           ERROR_DEFAULT_VALUE.TITLE,
         );
         props.XButtonFunc();
@@ -447,10 +448,10 @@ function ApplyCalendar(props: ApplyCalendarModalProps) {
         </ThemeProvider>
       </InputDiv>
       <Button
-        text="제출"
+        text="提出"
         onClick={() => {
           if (startTime === '' || endTime === '')
-            alert('시작시간과 끝시간을 모두 선택해주세요');
+            alert('開始時間と終了時間をすべて選択してください');
           else {
             const startDate = NewDateKr(selectDate);
             startDate.setHours(Math.floor(Number(startTime) / 2));

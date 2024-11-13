@@ -64,7 +64,7 @@ const CardImg = styled.img<{
 `;
 
 const IineHeight = styled.div`
-  line-height: 3rem;
+  line-height: 2.5rem;
 `;
 
 interface sliderStlye {
@@ -84,19 +84,18 @@ export const CadetText = (
       {'< '} Cadet {' >'}
     </TitleStyle>
     <br />
-    1. 멘토의 <MainBlueBody>멘토링 상태 확인</MainBlueBody>하고 멘토링 신청 버튼
-    클릭
+    1. メンタリング<MainBlueBody>申請ボタン</MainBlueBody>をクリック
     <br />
-    2. 만남 <MainBlueBody>일정</MainBlueBody>과{' '}
-    <MainBlueBody>정보</MainBlueBody>를 작성하고 제출
+    2. 面会<MainBlueBody>日程</MainBlueBody>と<MainBlueBody>情報</MainBlueBody>
+    を記入して提出
     <br />
-    3. <MainBlueBody>마이페이지</MainBlueBody>에서 만남 상태 확인 가능
+    3. <MainBlueBody>マイページ</MainBlueBody>で面会の状態を確認可能
     <br />
-    4. 멘토링이 확정, 취소되면 카뎃에게
-    <MainBlueBody> 알림 메일 발송</MainBlueBody>
+    4. 確定、キャンセルされると、カデットに
+    <MainBlueBody>通知メール送信</MainBlueBody>
     <br />
-    5. 슬랙을 통한 <MainBlueBody>장소협의 후</MainBlueBody> 만남 일정 시간에
-    멘토링 진행
+    5. Slackを通じて<MainBlueBody>場所を協議後</MainBlueBody>
+    、面会予定時間にメンタリングを実施
   </TextStyle>
 );
 
@@ -106,19 +105,22 @@ export const MentorText = (
       {'< '} Mentor {' >'}
     </TitleStyle>
     <br />
-    1. 카뎃의 멘토링 신청 시 <MainBlueBody>알림 메일 발송</MainBlueBody>
+    1. カデットのメンタリング申請時に<MainBlueBody>通知メール送信</MainBlueBody>
     <br />
-    2. <MainBlueBody>마이페이지</MainBlueBody>에서 만남 상태 결정 가능 <br />
-    3. 멘토링이 확정, 취소되면 카뎃에게 알림 메일 발송 <br />
-    4. 슬랙을 통한 <MainBlueBody>장소협의 후</MainBlueBody> 만남 일정 시간에
-    멘토링 진행 <br />
-    5.멘토링 진행 후 <MainBlueBody> 보고서 작성 </MainBlueBody>가능
+    2. <MainBlueBody>マイページ</MainBlueBody>で面会の状態を決定可能
+    <br />
+    3. 確定またはキャンセルされると、カデットに通知メールが送信
+    <br />
+    4. Slackを通じて<MainBlueBody>場所を協議後</MainBlueBody>
+    、面会予定時間に実施
+    <br />
+    5. メンタリング終了後に<MainBlueBody>報告書作成</MainBlueBody>が可能
   </TextStyle>
 );
 
 const MoTextStyle = styled.div`
   ${theme.font.inter};
-  font-size: 1.3rem;
+  font-size: 1rem;
   line-height: 3.5rem;
   position: absolute;
   margin: 0 auto;
@@ -139,19 +141,18 @@ export const MoCadetText = (
       {'< '} Cadet {' >'}
     </MoTitleStyle>
     <br />
-    1. 멘토의 <MainBlueBody>멘토링 상태 확인</MainBlueBody>하고 멘토링 신청 버튼
-    클릭
+    1. メンタリング<MainBlueBody>申請ボタン</MainBlueBody>をクリック
     <br />
-    2. 만남 <MainBlueBody>일정</MainBlueBody>과{' '}
-    <MainBlueBody>정보</MainBlueBody>를 작성하고 제출
+    2. 面会<MainBlueBody>日程</MainBlueBody>と<MainBlueBody>情報</MainBlueBody>
+    を記入して提出
     <br />
-    3. <MainBlueBody>마이페이지</MainBlueBody>에서 만남 상태 확인 가능
+    3. <MainBlueBody>マイページ</MainBlueBody>で面会の状態を確認可能
     <br />
-    4. 멘토링이 확정, 취소되면 카뎃에게
-    <MainBlueBody> 알림 메일 발송</MainBlueBody>
+    4. 確定、キャンセルされると、カデットに
+    <MainBlueBody>通知メール送信</MainBlueBody>
     <br />
-    5. 슬랙을 통한 <MainBlueBody>장소협의 후</MainBlueBody> 만남 일정 시간에
-    멘토링 진행
+    5. Slackを通じて<MainBlueBody>場所を協議後</MainBlueBody>
+    、面会予定時間にメンタリングを実施
   </MoTextStyle>
 );
 
@@ -161,13 +162,16 @@ export const MoMentorText = (
       {'< '} Mentor {' >'}
     </MoTitleStyle>
     <br />
-    1. 카뎃의 멘토링 신청 시 <MainBlueBody>알림 메일 발송</MainBlueBody>
+    1. カデットのメンタリング申請時に<MainBlueBody>通知メール送信</MainBlueBody>
     <br />
-    2. <MainBlueBody>마이페이지</MainBlueBody>에서 만남 상태 결정 가능 <br />
-    3. 멘토링이 확정, 취소되면 카뎃에게 알림 메일 발송 <br />
-    4. 슬랙을 통한 <MainBlueBody>장소협의 후</MainBlueBody> 만남 일정 시간에
-    멘토링 진행 <br />
-    5.멘토링 진행 후 <MainBlueBody> 보고서 작성 </MainBlueBody>가능
+    2. <MainBlueBody>マイページ</MainBlueBody>で面会の状態を決定可能
+    <br />
+    3. 確定またはキャンセルされると、カデットに通知メールが送信
+    <br />
+    4. Slackを通じて<MainBlueBody>場所を協議後</MainBlueBody>
+    、面会予定時間に実施
+    <br />
+    5. メンタリング終了後に<MainBlueBody>報告書作成</MainBlueBody>が可能
   </MoTextStyle>
 );
 
@@ -175,31 +179,27 @@ export const NoticeText = (
   <NoticeTextStyle>
     <br />
     <IineHeight>
-      1. 멘토링을 신청한 후<MainBlueBody> 48시간 이내</MainBlueBody>에 멘토가
-      <br />
-      수락하지 않을 경우 자동 취소
+      1. メンタリングを申請した後、<MainBlueBody>48時間以内</MainBlueBody>
+      にメンターが承諾しない場合は自動キャンセルされます
     </IineHeight>
     <br />
     <IineHeight>
-      2. 멘토링 수락은 카뎃이 선택한 가장 늦은  희망시간 <br />
-      <MainBlueBody> 10분 전</MainBlueBody>까지 가능 그 이후는
-      <MainBlueBody> 자동취소</MainBlueBody>
+      2. メンタリングの承諾はカデットが選んだ最も遅い希望時間の
+      <MainBlueBody>10分前</MainBlueBody>まで可能です。それ以降は
+      <MainBlueBody>自動キャンセル</MainBlueBody>されます
     </IineHeight>
     <br />
     <IineHeight>
-      3. <MainBlueBody>멘토</MainBlueBody>의 경우 마이페이지에서
-      <MainBlueBody>
-        {' '}
-        멘토 키워드 1개 이상 <br />{' '}
-      </MainBlueBody>{' '}
-      선택해주세요! 키워드가 없으면 노출되지 않습니다
+      3. <MainBlueBody>メンター</MainBlueBody>の場合、マイページで
+      <MainBlueBody>メンターキーワードを1つ以上</MainBlueBody>
+      選択してください！キーワードがないと表示されません
     </IineHeight>
   </NoticeTextStyle>
 );
 
 const MoNoticeTextStyle = styled.div`
   ${theme.font.inter};
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   line-height: 1rem;
   position: absolute;
   margin: 0 auto;
@@ -213,24 +213,20 @@ export const MoNoticeText = (
   <MoNoticeTextStyle>
     <br />
     <IineHeight>
-      1. 멘토링을 신청한 후<MainBlueBody> 48시간 이내</MainBlueBody>에 멘토가
-      <br />
-      수락하지 않을 경우 자동 취소
+      1. メンタリングを申請した後、<MainBlueBody>48時間以内</MainBlueBody>
+      にメンターが承諾しない場合は自動キャンセルされます
     </IineHeight>
     <br />
     <IineHeight>
-      2. 멘토링 수락은 카뎃이 선택한 가장 늦은  희망시간 <br />
-      <MainBlueBody> 10분 전</MainBlueBody>까지 가능 그 이후는
-      <MainBlueBody> 자동취소</MainBlueBody>
+      2. メンタリングの承諾はカデットが選んだ最も遅い希望時間の
+      <MainBlueBody>10分前</MainBlueBody>まで可能です。それ以降は
+      <MainBlueBody>自動キャンセル</MainBlueBody>されます
     </IineHeight>
     <br />
     <IineHeight>
-      3. <MainBlueBody>멘토</MainBlueBody>의 경우 마이페이지에서
-      <MainBlueBody>
-        {' '}
-        멘토 키워드 1개 이상 <br />{' '}
-      </MainBlueBody>{' '}
-      선택해주세요! 키워드가 없으면 노출되지 않습니다
+      3. <MainBlueBody>メンター</MainBlueBody>の場合、マイページで
+      <MainBlueBody>メンターキーワードを1つ以上</MainBlueBody>
+      選択してください！キーワードがないと表示されません
     </IineHeight>
   </MoNoticeTextStyle>
 );

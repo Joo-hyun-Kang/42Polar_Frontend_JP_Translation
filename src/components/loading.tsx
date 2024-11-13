@@ -31,17 +31,17 @@ export const LoadingText = styled.div`
 `;
 
 const text: string[] = [
-  '별을 수집중입니다',
-  '별과 연락을 주고받고 있습니다',
-  '별지기가 요청을 수행중입니다',
-  '새로운 행성을 찾는중입니다',
-  '우주선과 연락을 주고 받고 있습니다',
-  '폴라 함선과 연결중입니다',
-  '신입 항해사가 운전중입니다',
-  '숙련된 항해사가 운전중입니다',
-  '재미 있는 여행을 계획중입니다',
-  '북극성의 좌표를 찾았습니다',
-  '목표를 향해 전진하고 있습니다',
+  '星を集めています',
+  '星と連絡を取り合っています',
+  '星の守り手がリクエストを遂行中です',
+  '新しい惑星を探しています',
+  '宇宙船と連絡を取っています',
+  'ポーラー艦船と接続中です',
+  '新人航海士が運転しています',
+  '熟練した航海士が運転しています',
+  '楽しい旅を計画中です',
+  '北極星の座標を見つけました',
+  '目標に向かって前進しています',
 ];
 
 function getRandomNumber(min: number, max: number) {
@@ -60,10 +60,10 @@ export function Loading() {
 
   return (
     <Background>
-      <img src={spinner} alt="로딩중" width="5%" />
+      <img src={spinner} alt="ローディング中" width="5%" />
       <LoadingText>{`${
         text[getRandomNumber(0, text.length)]
-      }. 잠시만 기다려주세요.`}</LoadingText>
+      }. 少々お待ちください`}</LoadingText>
     </Background>
   );
 }
